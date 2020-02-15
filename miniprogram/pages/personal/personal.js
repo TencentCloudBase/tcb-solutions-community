@@ -1,4 +1,3 @@
-// pages/personal/personal.js
 Page({
 
   /**
@@ -12,7 +11,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const that = this;
+    that.getUserInfo();
+    console.log(that.data.userInfo)
   },
 
   /**

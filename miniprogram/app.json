@@ -10,7 +10,7 @@
     "pages/registerstatus/registerstatus",
     "pages/punchcardlist/punchcardlist",
     "pages/punchcardcheckin/punchcardcheckin",
-    "pages/punchcardwarn/punchcardwarn",
+    "pages/punchcardstatus/punchcardstatus",
     "pages/personaldetails/personaldetails",
     "pages/commoditydetail/commoditydetail",
     "pages/issuecommodity/issuecommodity"

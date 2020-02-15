@@ -20,7 +20,7 @@ App({
       updateManager.onUpdateReady(function () {
         wx.showModal({
           content: '发现新版本，请重启当前小程序~',
-          confirmColor: '#ffbb12',
+          confirmColor: '#2f8dd6',
           confirmText: '确定重启',
           showCancel: false,
           success: function (res) {
