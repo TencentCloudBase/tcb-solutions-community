@@ -14,6 +14,9 @@ page {
 form{
   width: 100%;
 }
+button{
+  padding: 0!important;
+}
 button::after{
   border: none;
 }
@@ -47,6 +50,9 @@ button::after{
   right: 0;
   background: rgba(0, 0, 0, 0.6);
   z-index:10000;
+}
+.mainColor{
+  color: #2f8dd6;
 }
 
 /* page */

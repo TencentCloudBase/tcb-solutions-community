@@ -1,0 +1,37 @@
+<!-- 个人中心 -->
+<view class="container">
+  <view class="banner">
+    <view>
+    </view>
+  </view>
+  <view class="listBox">
+    <view class="listLi">
+      <icon class="iconfont icon-map"></icon>
+      <view>
+        <text>疫情补充</text>
+        <icon class="iconfont icon-right"></icon>
+      </view>
+    </view>
+    <view class="listLi">
+      <icon class="iconfont icon-message"></icon>
+      <view>
+        <text>个人信息修改</text>
+        <icon class="iconfont icon-right"></icon>
+      </view>
+    </view>
+    <button open-type="contact" class="listLi">
+      <icon class="iconfont icon-service"></icon>
+      <view>
+        <text>客服中心</text>
+        <icon class="iconfont icon-right"></icon>
+      </view>
+    </button>
+    <view bindtap="openSettingClicked" class="listLi">
+      <icon class="iconfont icon-setting"></icon>
+      <view>
+        <text>设置</text>
+        <icon class="iconfont icon-right"></icon>
+      </view>
+    </view>
+  </view>
+</view>

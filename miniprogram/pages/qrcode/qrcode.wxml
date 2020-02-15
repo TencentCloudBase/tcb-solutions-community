@@ -1,0 +1,26 @@
+<view class="container-box">
+  <view class="codeBox">
+    <block wx:if="{{!isQrCodeStauts}}">
+      <text>用户名</text>
+      <text>城市 区域</text>
+    </block>
+    <block wx:else>
+      <text>{{userInfo.nickName}}</text>
+      <text>{{userInfo.country}} {{userInfo.province}}</text>
+    </block>
+    <view class="codeImg {{!isQrCodeStauts?'active':''}}">
+      <button wx:if="{{!isQrCodeStauts}}" bindgetuserinfo="getUserInfo"  open-type="getUserInfo">去生成</button>
+      <image bindtap="previewImg" mode="widthFix" src="{{imagePath}}"></image>
+    </view>
+    <text>扫描通行二维码通行公共场所</text>
+  </view>
+  <!-- <form bindsubmit="formSubmit">
+    <view class="input-row">
+      <label>内容：</label>
+      <input name='url' value='' type="text" maxlength="500" placeholder="{{placeholder}}"/>
+    </view>
+  </form> -->
+</view>
+<view class="canvas-box">
+  <canvas hidden="{{canvasHidden}}" style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="mycanvas"/>
+</view>
