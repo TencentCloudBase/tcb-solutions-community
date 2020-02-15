@@ -1,10 +1,9 @@
 /**app.wxss**/
 @import "./common/style/animate.wxss";
-@import "./common/style/base.wxss";
 @import "./common/iconfont/iconfont.wxss";
-element {
+view, scroll-view, swiper, button, input, textarea, label, navigator, image,element {
   box-sizing: border-box;
-} 
+}
 /* reset */
 page {
   background-color: #F8F8F8;
@@ -25,6 +24,168 @@ button::after{
   opacity: 0.5;
 }
 /* lib */
+
+
+.round {
+  border-radius: 50%;
+}
+
+.radius {
+  border-radius: 6rpx;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.self-center {
+  align-self: flex-center;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.self-stretch {
+  align-self: stretch;
+}
+
+.flex-none {
+  flex: none;
+}
+
+.flex-auto {
+  flex: auto;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.white{
+  color: white;
+}
+.black{
+  color: black;
+}
+.lightgray{
+  color: #eee;
+}
+.gray{
+  color: #666;
+}
+.darkgray{
+  color: #333;
+}
+.small {
+  font-size: 24rpx;
+}
+
+.maxline2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-none {
+  overflow: none;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.button {
+  font-size: 26rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+}
+
+.button.button-primary {
+  background-color: #458fe0;
+  color: #fff;
+}
+
 .strong{
   font-weight: bold;
 }
