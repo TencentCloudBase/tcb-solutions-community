@@ -79,6 +79,35 @@ async function checkImage(filePath) {
     })
   })
 }
+/**
+ * 校验文本
+ */
+async function checkFont(markFont) {
+  return new Promise((reslove, reject) => {
+    wx.cloud.callFunction({
+      name: 'openapi',
+      data: {
+        action: 'msgSecCheck',
+        content: markFont
+      },
+      success: res => {
+        console.log("是否合规：", res.result)
+        reslove(res.result.errCode)
+      },
+      fail: err => {
+        reslove(err)
+        wx.showToast({
+          title: '此内容违反相关法律法规,请重新输入~',
+          icon: 'none',
+          duration: 3000
+        })
+      }
+    })
+  })
+}
+
+
+
 
 /**
  * json转换
@@ -95,5 +124,6 @@ module.exports = {
   converMbSize,
   converSize,
   checkImage,
+  checkFont,
   json2Form
 }
