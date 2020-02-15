@@ -30,13 +30,19 @@
 		"game": {
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 0,
 			"list": [
 				{
-					"id": -1,
-					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide"
+					"id": 0,
+					"name": "个人中心",
+					"pathName": "pages/personal/personal",
+					"query": "",
+					"scene": null
 				}
 			]
 		}
