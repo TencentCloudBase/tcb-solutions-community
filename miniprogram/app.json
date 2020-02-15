@@ -8,6 +8,7 @@
     "pages/virusdetail/virusdetail",
     "pages/virusmap/virusmap",
     "pages/registerstatus/registerstatus",
+    "pages/registervisitor/registervisitor",
     "pages/punchcardlist/punchcardlist",
     "pages/punchcardcheckin/punchcardcheckin",
     "pages/punchcardstatus/punchcardstatus",
