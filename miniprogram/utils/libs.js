@@ -45,7 +45,7 @@ Page = function (app) {
   if (!app.onShareAppMessage) {
     app.onShareAppMessage = function () {
       return {
-        title: "社区防疫小程序",
+        title: "战‘疫’时刻，有所持而不恐。见“疫”隔离，守卫您的家园。",
         imageUrl: "",
         path: '/pages/index/index'
       }

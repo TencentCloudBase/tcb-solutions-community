@@ -1,0 +1,87 @@
+<!-- 首页 -->
+<view class="container">
+  <!-- 焦点图 -->
+  <view class="banner">
+    <view>
+      <image mode="widthFix" src="../../common/image/banner.png"></image>
+    </view>
+  </view>
+  <!-- 跳转集合 -->
+  <view class="skipUl">
+    <navigator hover-class="none" url="">
+      <image mode="widthFix" src="../../common/image/icon-register.jpg"></image>
+      <view>
+        <text>拜访登记</text>
+        <text>描述描述描述</text>
+      </view>
+    </navigator>
+    <navigator hover-class="none" url="">
+      <image mode="widthFix" src="../../common/image/icon-punch.jpg"></image>
+      <view>
+        <text>健康打卡</text>
+        <text>描述描述描述</text>
+      </view>
+    </navigator>
+    <navigator hover-class="none" url="">
+      <image mode="widthFix" src="../../common/image/icon-purchase.jpg"></image>
+      <view>
+        <text>物资采购</text>
+        <text>描述描述描述</text>
+      </view>
+    </navigator>
+    <navigator hover-class="none" url="">
+      <image mode="widthFix" src="../../common/image/icon-map.jpg"></image>
+      <view>
+        <text>疫情地图</text>
+        <text>描述描述描述</text>
+      </view>
+    </navigator>
+  </view>
+  <!-- 附近信息 -->
+  <view class="nearbyUl">
+    <view class="nearbyTitle">
+      <view>
+        <text>定位<text class="active">3km</text>内发现1处疫情</text>
+        <text>出行请做好防护准备</text>
+      </view>
+      <button open-type="share">分享</button>
+    </view>
+    <view class="nearbyli">
+      <view>
+        <text>锦江南路9号</text>
+        <text>该处疫情于5天前披露</text>
+      </view>
+      <view>
+        <text>514m</text>
+        <text>离你最近</text>
+      </view>
+    </view>
+    <view class="nearbyli">
+      <view>
+        <text>锦江南路9号</text>
+        <text>该处疫情于5天前披露</text>
+      </view>
+      <view>
+        <text>514m</text>
+      </view>
+    </view>
+    <view class="nearbyli">
+      <view>
+        <text>锦江南路9号</text>
+        <text>该处疫情于5天前披露</text>
+      </view>
+      <view>
+        <text>514m</text>
+      </view>
+    </view>
+    <view class="nearbyli">
+      <view>
+        <text>锦江南路9号</text>
+        <text>该处疫情于5天前披露</text>
+      </view>
+      <view>
+        <text>514m</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,66 @@
+page{
+  background: #4a90e2;
+}
+.codeBox{
+  width: 80%;
+  background: #fff;
+  margin: 40rpx auto 0;
+  border-radius: 6rpx;
+  padding: 70rpx 0 40rpx 0;
+  box-sizing: border-box;
+}
+.codeBox>text{
+  display: block;
+  text-align: center;
+}
+.codeBox>text:nth-child(1){
+  font-size: 32rpx;
+  color: #333;
+  line-height: 40rpx;
+}
+.codeBox>text:nth-child(2){
+  font-size: 28rpx;
+  color: #888;
+}
+.codeBox>text:nth-last-of-type(1){
+  line-height: 180rpx;
+  color: #333;
+  font-size: 30rpx;
+}
+.codeImg{
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+.codeImg.active::before{
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+}
+.codeImg>button{
+  position: absolute;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  margin-top: -40rpx;
+  margin-left: -105rpx;
+  background-image: linear-gradient(225deg, #00C8FE 0%, #4FACFE 100%);
+  color: #fff;
+  font-size: 26rpx;
+  border-radius: 15rpx;
+  width: 210rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  animation: 1s infinite pulse;
+}
+
+.codeImg>image{
+  display: block;
+  margin: 20rpx auto 0;
+  width: 64%;
+}
+.canvas-box{position: fixed;top:999999rpx;left: 0}
