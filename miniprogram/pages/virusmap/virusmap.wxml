@@ -1,2 +1,22 @@
 <!--pages/virusmap/virusmap.wxml-->
-<text>pages/virusmap/virusmap.wxml</text>
+<view class="page">
+  <!-- 焦点图 -->
+  <view class="banner">
+    <view>
+      <view class="banner-title">
+        <view>疫情防控</view>
+        <text>我们在行动</text>
+      </view>
+    </view>
+  </view>
+  <!-- map.wxml -->
+  <view class="map">
+    <map id="map" longitude="113.93" latitude="22.54" markers="{{markers}}" bindmarkertap="markertap" bindregionchange="regionchange" show-location include-points="{{confirmedPoints}}" style="width:100%;height:{{clientHeight}}">
+      <view class="search">
+        <icon type="search" size="24"></icon>
+        <input name="query" placeholder="附近疫情小区">
+        </input>
+      </view>
+    </map>
+  </view>
+</view>
