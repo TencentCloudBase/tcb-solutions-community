@@ -1,2 +1,28 @@
-<!--pages/punchcardcheckin/punchcardcheckin.wxml-->
-<text>pages/punchcardcheckin/punchcardcheckin.wxml</text>
+<view class="punchin flex flex-column">
+  <view class="stats flex-none">本小区已经有<text>500</text>人参加健康打卡</view>
+  <view class="form flex-auto">
+    <view class="box">
+      <view class="label">日期</view>
+      <input class="input" placeholder="2020-02-09"></input>      
+    </view>
+    <view class="box">
+      <view class="label">体温</view>
+      <input class="input" placeholder="2020-02-09"></input>      
+    </view>
+    <view class="box">
+      <view class="label">备注</view>
+      <input class="input" placeholder="2020-02-09"></input>      
+    </view>
+    <view class="other">
+      <view class="label">其他症状</view>
+      <view class="radios flex flex-row align-center">
+        <view class="box flex-none flex flex-column align-start" wx:for="{{symptoms}}" wx:key="title">
+          <radio></radio> 
+          <text class="title">{{item.title}}</text>
+          <text class="label">{{item.desc}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button class="fixed btn-back flex-none button button-primary">回到主页</button>
+</view>
