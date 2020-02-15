@@ -4,7 +4,6 @@
     "pages/qrcode/qrcode",
     "pages/personal/personal",
     "pages/viruslist/viruslist",
-
     "pages/virusdetail/virusdetail",
     "pages/virusmap/virusmap",
     "pages/registerstatus/registerstatus",
@@ -13,6 +12,8 @@
     "pages/punchcardcheckin/punchcardcheckin",
     "pages/punchcardstatus/punchcardstatus",
     "pages/personaldetails/personaldetails",
+    "pages/commoditydetail/commoditydetail",
+    "pages/issuecommodity/issuecommodity",
     "pages/commodity/commodity",
     "pages/replenish/replenish"
   ],
@@ -49,7 +50,7 @@
   },
   "permission": {
     "scope.userLocation": {
-      "desc": "你的位置信息将用于新型冠状病毒位置获取~" 
+      "desc": "你的位置信息将用于新型冠状病毒位置获取~"
     }
   },
   "sitemapLocation": "sitemap.json",

@@ -1,1 +1,81 @@
-/* pages/punchcardstatus/punchcardstatus.wxss */
+.punch-status{
+  height: 100vh;
+  overflow: hidden;
+}
+.punch-status.status-succ{
+  background-color: #458fe0;
+  padding: 20rpx;
+}
+.punch-status.status-warn{
+  background-color: #fff;
+  position: relative;
+  padding: 60% 20rpx 20rpx 20rpx;
+}
+.punch-status.status-warn::before{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 300rpx;
+  height: 300rpx;
+  top: 100rpx;
+  left: -80rpx;
+  border-radius: 50%;
+  background-color: #EC5C3B;
+}
+.punch-status.status-warn::after{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 40rpx;
+  right: -40rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #F6C24E;
+}
+.status{
+  padding-bottom: 40rpx;
+  color: #fff;
+}
+.status-warn .status{
+  color: #333;
+}
+.status .iconfont{
+  font-size: 100rpx;
+}
+.status .big{
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.box{
+  border-radius: 10rpx;
+  box-shadow: 0 0 10rpx rgba(0,0,0,.1);
+  background-color: white;
+  padding: 10rpx 20rpx;
+}
+.box+.box{
+  margin-left: 20rpx;
+}
+.label{
+  font-size: 24rpx;
+  color: #999;
+}
+.row+.row{
+  margin-top: 20rpx;
+}
+.panel{
+  background-color: #fff;
+  border-radius: 20rpx 20rpx 0 0;
+  padding: 50rpx 20rpx;
+}
+.button.button-primary.btn-back{
+  margin: 0;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: 0;
+}
+.button.btn-warn{  
+  background-image: linear-gradient(to right, #EC5C3B , #F6C24E);
+}
