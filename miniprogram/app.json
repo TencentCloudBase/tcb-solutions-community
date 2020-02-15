@@ -7,13 +7,15 @@
     "pages/virusdetail/virusdetail",
     "pages/virusmap/virusmap",
     "pages/registerstatus/registerstatus",
+    "pages/registervisitor/registervisitor",
     "pages/punchcardlist/punchcardlist",
     "pages/punchcardcheckin/punchcardcheckin",
-    "pages/punchcardwarn/punchcardwarn",
+    "pages/punchcardstatus/punchcardstatus",
     "pages/personaldetails/personaldetails",
     "pages/commoditydetail/commoditydetail",
     "pages/issuecommodity/issuecommodity",
-    "pages/punchcardstatus/punchcardstatus"
+    "pages/commodity/commodity",
+    "pages/replenish/replenish"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

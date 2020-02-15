@@ -55,7 +55,16 @@ button::after{
 .mainColor{
   color: #2f8dd6;
 }
-
+.mainBtn{
+  background-image: linear-gradient(225deg, #00C8FE 0%, #4FACFE 100%);
+  color: #fff;
+  font-size: 26rpx;
+  border-radius: 15rpx;
+  width: 210rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  animation: 1s infinite pulse;
+}
 /* page */
 .container {
   min-height: 100%;

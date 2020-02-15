@@ -1,4 +1,4 @@
-// miniprogram/pages/punchcardstatus/punchcardstatus.js
+
 Page({
 
   /**
