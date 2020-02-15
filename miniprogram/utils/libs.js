@@ -70,5 +70,35 @@ Page = function (app) {
     })
   }
 
+  /**
+  * 跳转到其他小程序
+  */
+  app.getUserInfo = function (e) {
+    const that = this;
+    if(e){
+      const userInfo = e.detail.userInfo;
+      that.setData({
+        isQrCodeStauts:true,
+        userInfo
+      })
+    }else{
+      wx.getSetting({
+        success (res){
+          if (res.authSetting['scope.userInfo']) {
+            wx.getUserInfo({
+              success: function(e) {
+                that.setData({
+                  userInfo:e.userInfo,
+                  isQrCodeStauts:true
+                })
+                console.log(that.data.userInfo)
+              }
+            })
+          }
+        }
+      })
+    }
+  }
+
   return oldPage(app)
 }

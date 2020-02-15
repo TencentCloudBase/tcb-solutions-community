@@ -31,31 +31,6 @@ Page({
     })
     that.createQrCode(that.data.placeholder, "mycanvas", size.w, size.h,'onLoad');
   },
-  getUserInfo: function (e) {
-    const that = this;
-    if(e){
-      const userInfo = e.detail.userInfo;
-      that.setData({
-        isQrCodeStauts:true,
-        userInfo
-      })
-    }else{
-      wx.getSetting({
-        success (res){
-          if (res.authSetting['scope.userInfo']) {
-            wx.getUserInfo({
-              success: function(e) {
-                that.setData({
-                  userInfo:e.userInfo,
-                  isQrCodeStauts:true
-                })
-              }
-            })
-          }
-        }
-      })
-    }
-  }, 
 
   /**
   * 生命周期函数--监听页面卸载

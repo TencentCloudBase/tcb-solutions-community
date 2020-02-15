@@ -1,7 +1,14 @@
 <!-- 个人中心 -->
 <view class="container">
   <view class="banner">
-    <view>
+    <view class="avatarBox">
+      <block wx:if="{{isQrCodeStauts}}">
+        <view>
+          <image mode="widthFix" src="{{userInfo.avatarUrl}}"></image>
+        </view>
+        <text>{{userInfo.nickName}}</text>
+      </block>
+      <button class="mainBtn" wx:if="{{!isQrCodeStauts}}" bindgetuserinfo="getUserInfo"  open-type="getUserInfo">获取头像</button>
     </view>
   </view>
   <view class="listBox">

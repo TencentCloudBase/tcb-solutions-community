@@ -3,33 +3,43 @@
   <!-- 焦点图 -->
   <view class="banner">
     <view>
-      <image mode="widthFix" src="../../common/image/banner.png"></image>
+      <swiper indicator-dots="true" indicator-color='rgba(255, 255, 255, .3)' indicator-active-color='#fff' autoplay="true" interval="30000" >
+        <swiper-item>
+          <image mode="widthFix" src="../../common/image/banner.png"></image>
+        </swiper-item>
+        <swiper-item>
+          <image mode="widthFix" src="../../common/image/banner.png"></image>
+        </swiper-item>
+        <swiper-item>
+          <image mode="widthFix" src="../../common/image/banner.png"></image>
+        </swiper-item>
+      </swiper>
     </view>
   </view>
   <!-- 跳转集合 -->
   <view class="skipUl">
-    <navigator hover-class="none" url="">
+    <navigator hover-class="opacity5" url="">
       <image mode="widthFix" src="../../common/image/icon-register.jpg"></image>
       <view>
         <text>拜访登记</text>
         <text>描述描述描述</text>
       </view>
     </navigator>
-    <navigator hover-class="none" url="">
+    <navigator hover-class="opacity5" url="">
       <image mode="widthFix" src="../../common/image/icon-punch.jpg"></image>
       <view>
         <text>健康打卡</text>
         <text>描述描述描述</text>
       </view>
     </navigator>
-    <navigator hover-class="none" url="">
+    <navigator hover-class="opacity5" url="">
       <image mode="widthFix" src="../../common/image/icon-purchase.jpg"></image>
       <view>
         <text>物资采购</text>
         <text>描述描述描述</text>
       </view>
     </navigator>
-    <navigator hover-class="none" url="">
+    <navigator hover-class="opacity5" url="">
       <image mode="widthFix" src="../../common/image/icon-map.jpg"></image>
       <view>
         <text>疫情地图</text>

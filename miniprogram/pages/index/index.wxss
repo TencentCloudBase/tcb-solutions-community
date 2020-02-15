@@ -18,7 +18,9 @@ page,
   border-radius: 10rpx;
   overflow: hidden;
 }
-.banner>view>image{
+
+.banner swiper,
+.banner swiper image{
   display: block;
   width: 100%;
 }
