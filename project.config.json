@@ -43,6 +43,34 @@
 					"pathName": "pages/personal/personal",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "健康打卡记录",
+					"pathName": "pages/punchcardlist/punchcardlist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "健康打卡",
+					"pathName": "pages/punchcardcheckin/punchcardcheckin",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "健康打卡成功",
+					"pathName": "pages/punchcardstatus/punchcardstatus",
+					"query": "type=succ",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "健康打卡警告",
+					"pathName": "pages/punchcardstatus/punchcardstatus",
+					"query": "type=warn",
+					"scene": null
 				}
 			]
 		}

@@ -1,5 +1,6 @@
 /**app.wxss**/
 @import "./common/style/animate.wxss";
+@import "./common/style/base.wxss";
 @import "./common/iconfont/iconfont.wxss";
 element {
   box-sizing: border-box;

@@ -1,47 +1,20 @@
-// pages/punchcardcheckin/punchcardcheckin.js
+// miniprogram/pages/punchcardstatus/punchcardstatus.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    symptoms: [
-      {
-        title: '寒战',
-        desc: '发冷'
-      },
-      {
-        title: '咳痰',
-        desc: '气管不适'
-      },
-      {
-        title: '发烧',
-        desc: '37度以上高温'
-      },
-      {
-        title: '咳痰',
-        desc: '气管不适'
-      },
-      {
-        title: '发烧',
-        desc: '37度以上高温'
-      },
-      {
-        title: '咳痰',
-        desc: '气管不适'
-      },
-      {
-        title: '发烧',
-        desc: '37度以上高温'
-      },
-    ]
+    type: "warn" // ["succ", "warn"]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      type: options.type
+    })
   },
 
   /**
