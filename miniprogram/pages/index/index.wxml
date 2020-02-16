@@ -39,7 +39,7 @@
         <text>描述描述描述</text>
       </view>
     </navigator>
-    <navigator hover-class="opacity5" url="">
+    <navigator hover-class="opacity5" url="../virusmap/virusmap">
       <image mode="widthFix" src="../../common/image/icon-map.jpg"></image>
       <view>
         <text>疫情地图</text>
