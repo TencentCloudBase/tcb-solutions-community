@@ -18,32 +18,32 @@
   </view>
   <!-- 跳转集合 -->
   <view class="skipUl">
-    <navigator hover-class="opacity5" url="">
+    <navigator hover-class="opacity5" url="/pages/registervisitor/registervisitor">
       <image mode="widthFix" src="../../common/image/icon-register.jpg"></image>
       <view>
         <text>拜访登记</text>
-        <text>描述描述描述</text>
+        <text>登记访客信息</text>
       </view>
     </navigator>
-    <navigator hover-class="opacity5" url="">
+    <navigator hover-class="opacity5" url="/pages/punchcardlist/punchcardlist">
       <image mode="widthFix" src="../../common/image/icon-punch.jpg"></image>
       <view>
         <text>健康打卡</text>
-        <text>描述描述描述</text>
+        <text>为了您的健康</text>
       </view>
     </navigator>
-    <navigator hover-class="opacity5" url="">
+    <navigator hover-class="opacity5" url="/pages/commodity/commodity">
       <image mode="widthFix" src="../../common/image/icon-purchase.jpg"></image>
       <view>
         <text>物资采购</text>
-        <text>描述描述描述</text>
+        <text>小区周边采买</text>
       </view>
     </navigator>
-    <navigator hover-class="opacity5" url="../virusmap/virusmap">
+    <navigator hover-class="opacity5" url="/pages/virusmap/virusmap">
       <image mode="widthFix" src="../../common/image/icon-map.jpg"></image>
       <view>
         <text>疫情地图</text>
-        <text>描述描述描述</text>
+        <text>快速发现疫情</text>
       </view>
     </navigator>
   </view>

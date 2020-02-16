@@ -37,12 +37,12 @@ page,
   border-radius: 25rpx;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 48%;
   float: left;
   margin-bottom: 40rpx;
   box-sizing: border-box;
-  padding: 40rpx 30rpx;
+  padding: 40rpx 20rpx;
 }
 .skipUl>navigator:nth-child(odd){
   margin-right: 4%;
