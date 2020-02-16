@@ -1,0 +1,73 @@
+.punchin{
+  height: 100vh;
+  background-color: white;
+}
+.stats{
+  font-size: 30rpx;
+  font-weight: bold;
+  padding: 20rpx 0;
+  margin: 20rpx;
+}
+.form{
+  margin: 0 20rpx;
+}
+.stats text{
+  color: #458FE0;
+}
+.box{
+  border-radius: 10rpx;
+  box-shadow: 0 0 10rpx rgba(0,0,0,.1);
+  background-color: white;
+  padding: 10rpx 20rpx;
+  border: solid 1px rgba(0,0,0,.1);
+}
+.box+.box{
+  margin-top: 30rpx;
+}
+.other{
+  margin: 20rpx 0;
+}
+.label{
+  font-size: 24rpx;
+  color: #999;
+}
+.input{
+  color: #333;
+  font-size: 30rpx;
+}
+.radios{
+  overflow: auto;
+  padding: 10rpx 0;
+}
+.radios .box{
+  position: relative;
+  height: 160rpx;
+  width: 300rpx;
+  margin-top: 0;
+  padding-top: 40rpx;
+}
+.radios .box radio{
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 50%;
+  transform: scale(.8);
+}
+.radios .box text{
+  display: block;
+}
+.box .title{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.radios .box+.box{
+  margin-left: 10rpx;
+}
+.button.button-primary.btn-back{
+  margin: 0;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: 0;
+}

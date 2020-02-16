@@ -1,0 +1,36 @@
+.punch-list{
+  border: solid rgba(0,0,0,.05);
+  border-width: 1rpx 0;
+  padding: 0 40rpx;
+}
+
+.header{
+  font-size: 28rpx;
+  color: #333;
+}
+
+.header .icon{
+  width: 30rpx;
+  height: 30rpx;
+  background-color: #5B90DC;
+  margin-right: 20rpx;
+}
+
+.item{
+  padding: 30rpx 0;
+  border-bottom: solid 2rpx rgba(0,0,0,.05);
+}
+
+.title{
+  font-size: 32rpx;
+  font-weight: bold;
+  margin: 10rpx 0 20rpx 0;
+}
+.date{
+  font-size: 26rpx;
+  color: rgba(0,0,0,.3);
+}
+.img{
+  width: 200rpx;
+  background-color: rgba(0,0,0,.1);
+}

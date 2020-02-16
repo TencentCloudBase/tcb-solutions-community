@@ -10,7 +10,7 @@
 		"enhance": true
 	},
 	"appid": "wx1b9cf09bfcb427dd",
-	"projectname": "%E7%A4%BE%E5%8C%BA%E7%96%AB%E6%83%85%E9%98%B2%E6%8E%A7",
+	"projectname": "solution",
 	"libVersion": "2.8.1",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
@@ -30,13 +30,54 @@
 		"game": {
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 0,
 			"list": [
 				{
-					"id": -1,
-					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide"
+					"id": 0,
+					"name": "个人中心",
+					"pathName": "pages/personal/personal",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "健康打卡记录",
+					"pathName": "pages/punchcardlist/punchcardlist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "健康打卡",
+					"pathName": "pages/punchcardcheckin/punchcardcheckin",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "健康打卡成功",
+					"pathName": "pages/punchcardstatus/punchcardstatus",
+					"query": "type=succ",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "健康打卡警告",
+					"pathName": "pages/punchcardstatus/punchcardstatus",
+					"query": "type=warn",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "通行码",
+					"pathName": "pages/qrcode/qrcode",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

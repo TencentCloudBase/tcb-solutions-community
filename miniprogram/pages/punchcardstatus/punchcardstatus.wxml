@@ -1,0 +1,29 @@
+<view class="punch-status status-{{type}} flex flex-column">
+  <view class="status flex-none flex align-center flex-column" wx:if="{{type ==='succ'}}">
+    <icon class="iconfont icon-message" />
+    <view class="big">感谢您</view>
+    <view class="small">您已完成今日的健康打卡</view>
+  </view>
+  <view class="status flex-none flex align-center flex-column" wx:else>
+    <view class="big">您的体温达到了</view>
+    <view class="big">38度</view>
+    <view class="small gray">请尽快就医 避免与他人接触</view>
+  </view>
+  <view class="panel flex-auto">
+    <view class="box row">
+      <view class="label">日期</view>
+      <text>2020-02-05</text>
+    </view>
+    <view class="flex row justify-between">
+      <view class="box flex-auto">
+        <view class="label">身体状态</view>
+        <text>一切正常</text>
+      </view>
+      <view class="box flex-auto">
+        <view class="label">体温</view>
+        <text>小于36度</text>
+      </view>
+    </view>
+  </view>
+  <button class="fixed btn-back btn-{{type}} flex-none button button-primary">回到主页</button>
+</view>
