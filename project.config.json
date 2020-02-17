@@ -50,6 +50,12 @@
 					"pathName": "pages/qrcode/qrcode",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "物资采购页面",
+					"pathName": "pages/commodity/commodity",
+					"scene": null
 				}
 			]
 		}

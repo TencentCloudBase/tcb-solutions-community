@@ -5,7 +5,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    time:'09:00',
+    TabCur: 3,
+    nav:[
+      {
+        id:0,
+        title:'采购交流'
+      },
+      {
+        id: 1,
+        title: '采购通知'
+      },
+      {
+        id: 2,
+        title: '采购登记'
+      },
+      {
+        id: 3,
+        title: '采购查看'
+      }
+    ]
   },
 
   /**
@@ -62,5 +81,15 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  /**
+   * 用户自定义函数
+   */
+  tabSelect(e) {
+    console.log(e.currentTarget.dataset.id)
+    this.setData({
+      TabCur: e.currentTarget.dataset.id,
+    })
   }
 })

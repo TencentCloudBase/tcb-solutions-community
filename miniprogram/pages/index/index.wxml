@@ -32,7 +32,7 @@
         <text>描述描述描述</text>
       </view>
     </navigator>
-    <navigator hover-class="opacity5" url="">
+    <navigator hover-class="opacity5" url="/pages/commodity/commodity">
       <image mode="widthFix" src="../../common/image/icon-purchase.jpg"></image>
       <view>
         <text>物资采购</text>
