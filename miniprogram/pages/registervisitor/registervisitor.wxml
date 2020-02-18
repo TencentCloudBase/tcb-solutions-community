@@ -1,2 +1,80 @@
-<!--pages/registervisitor/registervisitor.wxml-->
-<text>pages/registervisitor/registervisitor.wxml</text>
+<view class="top-bg">
+  <image style="width:100%;" mode="widthFix" src="cloud://cloud-tcb.636c-cloud-tcb-1301077292/images/bg-header.gif" />
+  <view class="tipText">拜访登记</view>
+</view>
+<!-- 表单提交 -->
+<view class="from">
+  <view class="title">
+    所在城区
+  </view>
+  <input></input>
+  <view class="action iconfont icon-right"></view>
+</view>
+<view class="from">
+  <view class="title">
+    被访户主
+  </view>
+  <input placeholder="请输入被访户主真实姓名"> </input>
+  <view></view>
+</view>
+<view class="from">
+  <view class="title">
+    本人姓名
+  </view>
+  <input placeholder="请输入本人真实姓名"></input>
+  <view></view>
+</view>
+<view class="from">
+  <view class="title">
+    手机号
+  </view>
+  <input type="mnuber" maxlength="11" placeholder="请输入手机号"></input>
+  <view></view>
+</view>
+<view class="from">
+  <view class="title">
+    住户/被访地址
+  </view>
+  <input placeholder="单元楼/单元号"></input>
+  <view></view>
+</view>
+<view class="from">
+  <view class="title">
+    是否驾车
+  </view>
+  <switch color="#4A90E2"></switch>
+</view>
+<view class="from">
+  <input placeholder="车牌号"></input>
+</view>
+<view style="color:#999;font-size:24rpx;margin:20rpx;">
+  来访事由
+</view>
+<radio-group>
+  <view class="from">
+    <view class="title">家电维修</view>
+    <radio></radio>
+  </view>
+  <view class="from">
+    <view class="title">家电维修</view>
+    <radio></radio>
+  </view>
+  <view class="from">
+    <view class="title" style="color:#0036A4;">其他</view>
+    <radio></radio>
+  </view>
+</radio-group>
+<view style="color:#999;font-size:24rpx;margin:20rpx;">
+  文本域
+</view>
+<view class="margin-sm">
+<textarea placeholder="请输入文本" maxlength="200" bindinput="inputOther">
+
+</textarea>
+<text class="fr" style="color:#999;font-size:24rpx;">{{otherText}}/200</text>
+
+<view class="kb"></view>
+</view>
+<view class="btn-back">
+  回到主页
+</view>

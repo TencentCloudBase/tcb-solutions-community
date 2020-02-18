@@ -15,6 +15,7 @@
     "pages/commoditydetail/commoditydetail",
     "pages/issuecommodity/issuecommodity",
     "pages/commodity/commodity",
+    "pages/commodityhome/commodityhome",
     "pages/replenish/replenish"
   ],
   "window": {
