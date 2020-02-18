@@ -116,7 +116,8 @@
 					"id": -1,
 					"name": "群众举报",
 					"pathName": "pages/situationsupplement/situationsupplement"
-        },{
+				},
+				{
 					"id": -1,
 					"name": "物资采购页面",
 					"pathName": "pages/commodity/commodity",

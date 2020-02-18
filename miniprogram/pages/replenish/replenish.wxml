@@ -1,48 +1,42 @@
 <view class="container replenish-container">
-	<view class="top-content">
-		<swiper class="replenish-swiper" circular="{{true}}" indicator-dots="{{false}}" autoplay="{{true}}" interval="{{3000}}" duration="{{1000}}">
-			<swiper-item class="swiper-item">
-				<view class="swiper-item-img r">1</view>
-			</swiper-item>
-			<swiper-item class="swiper-item">
-				<view class="swiper-item-img g">2</view>
-			</swiper-item>
-			<swiper-item class="swiper-item">
-				<view class="swiper-item-img b">3</view>
-			</swiper-item>
-		</swiper>
-	</view>
-	<view class="bottom-content">
-		<view class="button-row">
-			<view class="replenish-button" bindtap="toSituationsupplement" hover-class="opacity5">
-				<view class="icon-box">
-          <image src="/common/image/icon-new.svg" class="replenish-button-icon"></image>
-        </view>
-				<view class="button-text-box">
-					<view class="button-text-title">疫情补充</view>
-					<view class="button-text-desc">描述描述</view>
-				</view>
-			</view>
-			<view class="replenish-button" bindtap="toCommunityreport" hover-class="opacity5">
-				<view class="icon-box">
-          <image src="/common/image/icon-report.svg" class="replenish-button-icon"></image>
-        </view>
-				<view class="button-text-box">
-					<view class="button-text-title">小区上报</view>
-					<view class="button-text-desc">描述描述</view>
-				</view>
-			</view>
-		</view>
-		<view class="button-row">
-			<view class="replenish-button" bindtap="toReportrecord" hover-class="opacity5">
-				<view class="icon-box">
-          <image src="/common/image/icon-check.svg" class="replenish-button-icon"></image>
-        </view>
-				<view class="button-text-box">
-					<view class="button-text-title">提交查看</view>
-					<view class="button-text-desc">描述描述</view>
-				</view>
-			</view>
-		</view>
-	</view>
+	<!-- 焦点图 -->
+  <view class="banner">
+    <view>
+      <swiper indicator-dots="true" indicator-color='rgba(255, 255, 255, .3)' indicator-active-color='#fff' autoplay="true" interval="30000" >
+        <swiper-item>
+          <image mode="widthFix" src="../../common/image/banner.png"></image>
+        </swiper-item>
+        <swiper-item>
+          <image mode="widthFix" src="../../common/image/banner.png"></image>
+        </swiper-item>
+        <swiper-item>
+          <image mode="widthFix" src="../../common/image/banner.png"></image>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+  <!-- 跳转集合 -->
+  <view class="skipUl">
+    <navigator hover-class="opacity5" url="/pages/situationsupplement/situationsupplement">
+			<image mode="widthFix"  src="/common/image/icon-new.svg"></image>
+      <view>
+        <text>疫情补充</text>
+        <text>描述描述</text>
+      </view>
+    </navigator>
+    <navigator hover-class="opacity5" url="/pages/communityreport/communityreport">
+			<image mode="widthFix" src="/common/image/icon-report.svg"></image>
+      <view>
+        <text>小区上报</text>
+        <text>描述描述</text>
+      </view>
+    </navigator>
+    <navigator hover-class="opacity5" url="/pages/reportrecord/reportrecord">
+			<image mode="widthFix" src="/common/image/icon-check.svg"></image>
+      <view>
+        <text>提交查看</text>
+        <text>描述描述</text>
+      </view>
+    </navigator>
+  </view>
 </view>
