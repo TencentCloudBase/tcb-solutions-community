@@ -4,10 +4,22 @@
 	"setting": {
 		"urlCheck": true,
 		"es6": true,
+		"enhance": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"enhance": true
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"appid": "wx1b9cf09bfcb427dd",
 	"projectname": "solution",
@@ -35,7 +47,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": -1,
 			"list": [
 				{
 					"id": 0,
@@ -77,6 +89,33 @@
 					"name": "通行码",
 					"pathName": "pages/qrcode/qrcode",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "疫情上报",
+					"pathName": "pages/replenish/replenish",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提交查看",
+					"pathName": "pages/reportrecord/reportrecord",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "小区上报",
+					"pathName": "pages/communityreport/communityreport",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "群众举报",
+					"pathName": "pages/situationsupplement/situationsupplement",
 					"scene": null
 				}
 			]

@@ -1,0 +1,45 @@
+<view class="container communityreport-container">
+  <view class="report-options-box">
+    <notification notificationText="{{notificationText}}"></notification>
+    <view class="type-radio-box">
+      <view class="radio-item" bindtap="choiceSituation" data-type="{{1}}">
+        <text>重点疫区车牌号</text>
+        <image data-type="{{1}}" src="/common/image/icon-selected.svg" class="choice-point" wx:if="{{communityReportData.reportType===1}}"></image>
+      </view>
+      <view class="radio-item" bindtap="choiceSituation" data-type="{{2}}">
+        <text>发现聚众行为</text>
+        <image data-type="{{2}}" src="/common/image/icon-selected.svg" class="choice-point" wx:if="{{communityReportData.reportType===2}}"></image>
+      </view>
+      <view class="radio-item" bindtap="choiceSituation" data-type="{{3}}">
+        <text>居家隔离人员擅自外出</text>
+        <image data-type="{{3}}" src="/common/image/icon-selected.svg" class="choice-point" wx:if="{{communityReportData.reportType===3}}"></image>
+      </view>
+    </view>
+    <view class="image-update-box">
+      <view class="image-update-title">
+        <view>图片上传</view>
+      </view>
+      <view class="image-update-wraper">
+        <view class="update-image-button-wrapper" wx:for="{{4}}" wx:key="index">
+          <view class="update-image-button" bindtap="chooseImage" data-imgindex="{{index}}" wx:if="{{communityReportData.images[index]===undefined}}">
+            <image mode="aspectFill" src="/common/image/icon-plus.svg" class="plus-icon" data-imgindex="{{index}}"></image>
+          </view>
+          <view wx:else class="choicedImage-wrapper">
+            <image class="choicedImage" mode="aspectFit" src="{{communityReportData.images[index]}}"></image>
+            <image mode="aspectFill" src="/common/image/icon-delete.svg" class="delete-icon" bindtap="deleteImage"  data-imgindex="{{index}}"></image>
+          </view>
+          
+        </view>
+      </view>
+    </view>
+    <view class="remark-box">
+      <view class="remark-title-box">
+        <view class="remark-title">备注</view>
+      </view>
+      <view class="remark-input-box">
+        <textarea class="remark-input" placeholder="请输入备注信息" maxlength="-1" bindinput="remarkChange"></textarea>
+      </view>
+    </view>
+  </view>
+  <view class="submit-button">提交</view>
+</view>

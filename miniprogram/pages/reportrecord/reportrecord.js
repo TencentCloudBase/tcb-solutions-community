@@ -1,4 +1,4 @@
-// pages/replenish/replenish.js
+// miniprogram/pages/reportrecord/reportrecord.js
 Page({
 
   /**
@@ -63,19 +63,12 @@ Page({
   onShareAppMessage: function () {
 
   },
-  toSituationsupplement: function() {
+  /**
+   * 跳转到疫情补充页面
+   */
+  toReplenish: function() {
     wx.navigateTo({
       url: '/pages/situationsupplement/situationsupplement',
-    })
-  },
-  toCommunityreport: function () {
-    wx.navigateTo({
-      url: '/pages/communityreport/communityreport',
-    })
-  },
-  toReportrecord: function () {
-    wx.navigateTo({
-      url: '/pages/reportrecord/reportrecord',
     })
   }
 })

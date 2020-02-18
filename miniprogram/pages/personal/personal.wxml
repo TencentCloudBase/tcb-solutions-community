@@ -12,7 +12,7 @@
     </view>
   </view>
   <view class="listBox">
-    <view class="listLi">
+    <view class="listLi" bindtap="toRelenish">
       <icon class="iconfont icon-map"></icon>
       <view>
         <text>疫情补充</text>

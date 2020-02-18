@@ -1,0 +1,82 @@
+view {
+  display: flex
+}
+.container {
+  width: 750rpx;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.reportrecord-container {
+
+  background: #FFFFFF
+}
+.report-options-box {
+  width: 750rpx;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.notification-box {
+  width: 750rpx;
+  height: 60rpx;
+  background-color: #fefceb;
+}
+
+.record-item-button {
+  width: 730rpx;
+  height: 300rpx;
+  margin-top: 50rpx;
+  background-color: #0f8ee9;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.record-top-text {
+  width: 670rpx;
+  height: 80rpx;
+  font-size: 40rpx;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.record-bottom-text {
+  width: 670rpx;
+  height: 160rpx;
+  font-size: 34rpx;
+}
+
+.submit-button {
+  width: 750rpx;
+  height: 92rpx;
+  background-color: #0f8ee9;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  color: #fff;
+}

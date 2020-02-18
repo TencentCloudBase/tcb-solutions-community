@@ -1,2 +1,48 @@
-<!--pages/replenish/replenish.wxml-->
-<text>pages/replenish/replenish.wxml</text>
+<view class="container replenish-container">
+	<view class="top-content">
+		<swiper class="replenish-swiper" circular="{{true}}" indicator-dots="{{false}}" autoplay="{{true}}" interval="{{3000}}" duration="{{1000}}">
+			<swiper-item class="swiper-item">
+				<view class="swiper-item-img r">1</view>
+			</swiper-item>
+			<swiper-item class="swiper-item">
+				<view class="swiper-item-img g">2</view>
+			</swiper-item>
+			<swiper-item class="swiper-item">
+				<view class="swiper-item-img b">3</view>
+			</swiper-item>
+		</swiper>
+	</view>
+	<view class="bottom-content">
+		<view class="button-row">
+			<view class="replenish-button" bindtap="toSituationsupplement" hover-class="opacity5">
+				<view class="icon-box">
+          <image src="/common/image/icon-new.svg" class="replenish-button-icon"></image>
+        </view>
+				<view class="button-text-box">
+					<view class="button-text-title">疫情补充</view>
+					<view class="button-text-desc">描述描述</view>
+				</view>
+			</view>
+			<view class="replenish-button" bindtap="toCommunityreport" hover-class="opacity5">
+				<view class="icon-box">
+          <image src="/common/image/icon-report.svg" class="replenish-button-icon"></image>
+        </view>
+				<view class="button-text-box">
+					<view class="button-text-title">小区上报</view>
+					<view class="button-text-desc">描述描述</view>
+				</view>
+			</view>
+		</view>
+		<view class="button-row">
+			<view class="replenish-button" bindtap="toReportrecord" hover-class="opacity5">
+				<view class="icon-box">
+          <image src="/common/image/icon-check.svg" class="replenish-button-icon"></image>
+        </view>
+				<view class="button-text-box">
+					<view class="button-text-title">提交查看</view>
+					<view class="button-text-desc">描述描述</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

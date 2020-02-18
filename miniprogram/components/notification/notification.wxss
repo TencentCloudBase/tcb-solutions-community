@@ -1,0 +1,53 @@
+/* components/notification/motification.wxss */
+
+.notification-box {
+  width: 750rpx;
+  height: 60rpx;
+  background-color: #fefceb;
+  position: relative;
+}
+
+.notification-voice-icon {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  left: 15rpx;
+  top: 15rpx;
+}
+
+.notification-close-icon-box {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  left: 700rpx;
+  top: rpx;
+  justify-content: center;
+  align-items: center;
+}
+
+.notification-close-icon {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.notification-scroll {
+  width: 640rpx;
+  height: 60rpx;
+  margin-left: 50rpx;
+}
+
+.notification-scroll-item {
+  width: 640rpx;
+  height: 60rpx;
+  align-items: center;
+}
+
+.scroll-item-text {
+  padding-left: 680rpx;
+  padding-right: 680rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  white-space: nowrap;
+  color: #f96a0e;
+}

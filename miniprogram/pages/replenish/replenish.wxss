@@ -1,1 +1,137 @@
-/* pages/replenish/replenish.wxss */
+view {
+  display: flex;
+}
+
+.replenish-container {
+  width: 750rpx;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  background: #ffffff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+/* top */
+
+.top-content {
+  width: 750rpx;
+  height: 400rpx;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.replenish-swiper {
+  width: 100%;
+  height: 350rpx;
+}
+
+.swiper-item {
+  display: flex;
+  width: 750rpx;
+  height: 350rpx;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-item-img  {
+  width: 700rpx;
+  height: 330rpx;
+  border-radius: 20rpx;
+}
+/* end top */
+
+/* bottom */
+
+.bottom-content {
+  width: 750rpx;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.button-row {
+  width: 720rpx;
+  height: 180rpx;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+
+.replenish-button {
+  width: 340rpx;
+  height: 150rpx;
+  margin: 0 10rpx;
+  background-color: #f1f8ff;
+  border-radius: 10rpx;
+}
+
+.icon-box {
+  width: 140rpx;
+  height: 150rpx;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.replenish-button-icon {
+  width: 90rpx;
+  height:90rpx;
+}
+.button-icon {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.button-text-box {
+  width: 200rpx;
+  height: 150rpx;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.button-text-title {
+  font-size: 34rpx;
+  color: #3a3a3a;
+}
+
+.button-text-desc {
+  font-size: 28rpx;
+  color: #b4b4b4;
+}
+
+/* end bottom */
+
+.r {
+  background-color: red;
+}
+
+.g {
+  background-color: green;
+}
+
+.b {
+  background-color: blue;
+}

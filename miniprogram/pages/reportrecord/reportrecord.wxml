@@ -1,0 +1,14 @@
+<view class="container reportrecord-container">
+	<view class="report-options-box">
+		<notification notificationText="{{notificationText}}"></notification>
+		<view class="record-item-button">
+			<view class="record-top-text">成功记录</view>
+			<view class="record-bottom-text">XXXX XXXX XXXX</view>
+		</view>
+		<view class="record-item-button">
+			<view class="record-top-text">信息有误</view>
+			<view class="record-bottom-text">XXXX XXXX XXXX</view>
+		</view>
+	</view>
+	<view class="submit-button" bindtap="toReplenish">新疫情补充</view>
+</view>
