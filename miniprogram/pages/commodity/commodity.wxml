@@ -1,2 +1,108 @@
 <!--pages/commodity/commodity.wxml-->
-<text>pages/commodity/commodity.wxml</text>
+<view class="container">
+  <!-- 焦点图 -->
+  <view class="banner">
+    <scroll-view scroll-x class="bg-blue nav">
+      <view class="flex text-center text-white">
+        <view class="cu-item flex-sub {{index==TabCur?'text-orange cur':''}}" wx:for="{{nav}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+          {{nav[index].title}}
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  
+<!-- 下方页面 -->
+  <view wx:if="{{TabCur == 0}}">
+    <!-- 搜索框 -->
+    <view class="search-form ">
+      <text class="icon-right"></text>
+      <input type="text" placeholder="搜索" confirm-type="search"></input>
+    </view>
+    <!-- 标题 -->
+    <view class="title">
+      <text class="title-main">主标题</text>
+      <text class="title-desc">主标题描述</text>
+    </view>
+    <!-- 列表内容 -->
+    <view wx:for="{{10}}">
+      <view class="list-box">
+        <image class="avatar" src="https://wx.qlogo.cn/mmopen/vi_32/ajNVdqHZLLAFZw5gAn8pnNwl14H13flYzdkmFLHnmajmUK3nh9uyeKnp0AkMqKVQp363STIY6dyf90gElYiar2g/132"></image>
+        <view >
+          <view >xxxxxxxxxxxxxxxxxxxxxxxx</view>
+          <view >xxxxxxxxxxxxxxxxxxxx</view>
+          <view class="tip">紧急</view>
+        </view>
+      </view>
+    </view>
+  </view>
+<!-- 采购通知 -->
+  <view wx:if="{{TabCur == 1}}">
+    <view class="box-publicity" >
+      <view class="title-publicit">2月10日</view>
+      <view class="title-publicit">采购公示</view>
+    </view>
+    <button class="button">我要登记</button>
+    <button class="button">返回</button>
+  </view>
+  <!-- 采购登记 -->
+  <view wx:if="{{TabCur == 2}}">
+    <view class="box-publicity">
+      <view class="title-publicit" style="padding-left:20rpx;padding-top:20rpx;">采购申请</view>
+      <textarea class="textarea"  placeholder="点击输入采购内容，数量" style="padding-left:20rpx;"></textarea>
+    </view>
+    <button>提交</button>
+  </view>
+  <view wx:if="{{TabCur == 3}}">
+    <view class="box-record">
+      <view class="flex bg-white">
+        <image class="cu-avatar " src="https://wx.qlogo.cn/mmopen/vi_32/ajNVdqHZLLAFZw5gAn8pnNwl14H13flYzdkmFLHnmajmUK3nh9uyeKnp0AkMqKVQp363STIY6dyf90gElYiar2g/132"></image>  
+        <view>
+          <view class="text-bold" style="font-size:16px">采购记录</view> 
+          <view class="text-grey" style="font-size:12px">今天{{time}}同步</view> 
+        </view>
+      </view>
+      <view  class=" bg-white li-item">
+        <view class="text-bold">2月8日口罩采购成功</view>
+        <view class="text-grey" style="font-size:12px">今天09:00</view>
+      </view>
+      <view  class=" bg-white li-item">
+        <view class="text-bold">2月6日洗发水采购成功</view>
+        <view class="text-grey" style="font-size:12px">将在7日下午送达</view>
+      </view>
+      <view class="text-bold" style="margin-top:30rpx;margin-left:75rpx;">采购建议</view>
+      <textarea class="input"></textarea>
+      <button size="default" class="burron">提交</button>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+<!-- 
+<view wx:if="{{TabCur == 0}}">
+我是第一个页面
+</view>
+<view wx:if="{{TabCur == 1}}">
+
+</view>
+<view wx:if="{{TabCur == 2}}">
+我是第三个页面
+</view>
+<view wx:if="{{TabCur == 3}}" class="margin-top ">
+  <view  class=" bg-white li-item">
+    <view class="text-bold">2月8日口罩采购成功</view>
+    <view class="text-grey" style="font-size:12px">今天09:00</view>
+  </view>
+  <view  class=" bg-white li-item">
+    <view class="text-bold">2月6日洗发水采购成功</view>
+    <view class="text-grey" style="font-size:12px">将在7日下午送达</view>
+  </view>
+
+  <view class="text-bold">采购建议</view>
+  <textarea class="input"></textarea>
+  <button class="">提交</button>
+
+ -->
+

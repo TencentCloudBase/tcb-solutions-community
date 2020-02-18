@@ -18,7 +18,8 @@
     "pages/replenish/replenish",
     "pages/reportrecord/reportrecord",
     "pages/communityreport/communityreport",
-    "pages/situationsupplement/situationsupplement"
+    "pages/situationsupplement/situationsupplement",
+    "pages/commodityhome/commodityhome"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

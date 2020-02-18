@@ -19,13 +19,13 @@
         <icon class="iconfont icon-right"></icon>
       </view>
     </view>
-    <view class="listLi">
+    <navigator class="listLi" hover-class="opacity5" url="/pages/personaldetails/personaldetails">
       <icon class="iconfont icon-message"></icon>
       <view>
         <text>个人信息修改</text>
         <icon class="iconfont icon-right"></icon>
       </view>
-    </view>
+    </navigator>
     <button open-type="contact" class="listLi">
       <icon class="iconfont icon-service"></icon>
       <view>

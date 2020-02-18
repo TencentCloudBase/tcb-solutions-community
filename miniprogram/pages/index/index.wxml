@@ -32,7 +32,7 @@
         <text>为了您的健康</text>
       </view>
     </navigator>
-    <navigator hover-class="opacity5" url="/pages/commodity/commodity">
+    <navigator hover-class="opacity5" url="/pages/commodityhome/commodityhome">
       <image mode="widthFix" src="../../common/image/icon-purchase.jpg"></image>
       <view>
         <text>物资采购</text>
