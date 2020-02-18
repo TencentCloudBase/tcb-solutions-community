@@ -1,1 +1,68 @@
-/* pages/commodityhome/commodityhome.wxss */
+page,
+.container{
+  background: #fff;
+}
+/* banner */
+.banner{
+  width: 100%;
+  height: 200rpx;
+  background: #4a90e2;
+  position: relative;
+  box-sizing: border-box;
+  padding: 20rpx 0;
+  margin-bottom: 160rpx;
+}
+.banner>view{
+  margin: 20rpx auto 0;
+  width: 90%;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.banner swiper,
+.banner swiper image{
+  display: block;
+  width: 100%;
+}
+/* banner end */
+/* 跳转集合 */
+.skipUl{
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding:40rpx;
+}
+.skipUl>navigator{
+  background: #F1F8FF;  
+  border-radius: 25rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 48%;
+  float: left;
+  margin-bottom: 40rpx;
+  box-sizing: border-box;
+  padding: 40rpx 20rpx;
+}
+.skipUl>navigator:nth-child(odd){
+  margin-right: 4%;
+}
+.skipUl>navigator>view>text{
+  display: block;
+}
+.skipUl>navigator>view>text:nth-of-type(1){
+  font-weight: bold;
+  color: #333;
+  font-size: 30rpx;
+}
+.skipUl>navigator>view>text:nth-of-type(2){
+  color: #999;
+  font-size: 24rpx;
+}
+.skipUl>navigator>image{
+  display: block;
+  width: 100rpx;
+  height: 100rpx;
+}
+/* 跳转集合 end */
+

@@ -1,0 +1,69 @@
+page,
+.container{
+  background: #fff;
+}
+/* banner */
+.banner{
+  width: 100%;
+  height: 250rpx;
+  background: #4a90e2;
+  position: relative;
+  box-sizing: border-box;
+  padding: 20rpx 0;
+  margin-bottom: 20rpx;
+}
+.banner>view{
+  margin: 20rpx auto 0;
+  width: 90%;
+  overflow: hidden;
+  display: flex;
+}
+.banner>view>.avatar{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+
+}
+.banner>view>.info{
+  margin-left: 20rpx;
+  width: 500rpx;
+  color:white;
+}
+/* banner end */
+
+/* mainbody */
+.mainbody{
+  width: 90%;
+  margin: 0 auto;
+}
+.textarea{
+  margin: 10rpx 0;
+  width: 100%;
+  box-shadow: 1px 1px 5px 1px gainsboro;
+}
+/* mainbody end */
+/* 说明部分 */
+.infomation{
+  color:#4A90E2
+}
+/* 说明部分结束 */
+.btn-submit {
+  color: #fff;
+  border: 0rpx;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  overflow: visible;
+  margin-left: initial;
+  transform: translate(0rpx, 0rpx);
+  margin-right: initial;
+  background-image: linear-gradient(270deg, #118ee9 0%, #4990e2 100%);
+  min-height: 100rpx;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+}
