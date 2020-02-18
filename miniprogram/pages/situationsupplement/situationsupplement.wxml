@@ -1,0 +1,38 @@
+<view class="container situationsupplement-container">
+  <view class="report-options-box">
+    <notification notificationText="{{notificationText}}"></notification>
+    <view class="options-info-box">
+      <view class="options-item">
+        <view class="options-item-title">
+          <image src="/common/image/icon-position.svg" mode="aspectFill" class="situationsupplement-icon"></image>
+          <view>所在地区</view>
+        </view>
+        <view class="options-item-desc" bindtap="chooseArea">
+          <view wx:if="{{reportData.address === null}}" class="area-choose-button">
+            <view>地域选择</view>
+            <icon class="iconfont icon-right"></icon>
+          </view>
+          <text wx:else class="address-detail">{{reportData.address}}</text>
+        </view>
+      </view>
+      <view class="options-item">
+        <view class="options-item-title">
+          <image src="/common/image/icon-link.svg" mode="aspectFill" class="situationsupplement-icon"></image>
+          <view>可信链接</view>
+        </view>
+        <view class="options-item-desc">
+          <input class="desc-input" type="text" placeholder="请粘贴发布链接"  value="{{reportObj.link}}" bindchange="pasteLink"/>
+        </view>
+      </view>
+    </view>
+    <view class="remark-box">
+      <view class="remark-title-box">
+        <view class="remark-title">备注</view>
+      </view>
+      <view class="remark-input-box">
+        <textarea class="remark-input" placeholder="请输入备注信息" maxlength="-1" bindinput="remarkChange"></textarea>
+      </view>
+    </view>
+  </view>
+  <view class="submit-button" hover-class="opacity5" hover-stay-time="100" bindtap="submitSituation">提交</view>
+</view>

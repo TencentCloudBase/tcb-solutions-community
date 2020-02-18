@@ -59,5 +59,14 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /**
+   * 用户点击跳转上报疫情导航页
+   */
+  toRelenish: function() {
+    console.log('点击了')
+    wx.navigateTo({
+      url: '/pages/replenish/replenish',
+    })
   }
 })

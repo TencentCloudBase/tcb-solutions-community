@@ -1,0 +1,12 @@
+<!--components/notification/motification.wxml-->
+    <view class="notification-box" wx:if="{{isShow}}">
+      <image class="notification-voice-icon" src="/common/image/icon-notification.svg" mode="aspectFill"></image>
+      <view  class="notification-close-icon-box" bindtap="closeNotification">
+        <image src="/common/image/icon-notification-close.svg" class="notification-close-icon"></image>
+      </view>
+      <scroll-view scroll-x="true" class="notification-scroll" scroll-left="{{notificationTextPosition}}" id="notification-scroll">
+          <view class="scroll-content-wrapper">
+            <view  id="scroll-content" class="scroll-item-text">{{notificationText}}</view>
+          </view>
+        </scroll-view>
+    </view>
