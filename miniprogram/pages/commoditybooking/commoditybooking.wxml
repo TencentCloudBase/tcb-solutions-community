@@ -1,0 +1,22 @@
+<view class="container">
+  <!-- 焦点图 -->
+  <view class="banner">
+    <view>
+      <image class="avatar" src="https://wx.qlogo.cn/mmopen/vi_32/ajNVdqHZLLAFZw5gAn8pnNwl14H13flYzdkmFLHnmajmUK3nh9uyeKnp0AkMqKVQp363STIY6dyf90gElYiar2g/132"></image>
+      <view class="info">
+        <text>瞬旺超市</text>
+      </view>
+    </view>
+  </view>
+  <view class="mainbody">
+    <text class="infomation">填写采购信息</text>
+    <textarea class="textarea" placeholder="点击输入采购信息">
+      
+    </textarea>
+    <view class="infomation">
+      <view><text>商品费用说明：</text></view>
+      <view><text>商品价格以超市反馈为准！</text></view>
+    </view>
+  </view>
+  <view class="btn-submit">提交</view>
+</view>
