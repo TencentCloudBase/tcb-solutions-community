@@ -1,1 +1,66 @@
-/* pages/registervisitor/registervisitor.wxss */
+.top-bg {
+  /* height: 400rpx; */
+  width: 100%;
+}
+
+.tipText {
+  font-size: 70rpx;
+  color: #fff;
+  position: absolute;
+  left: 50rpx;
+  top: 130rpx;
+}
+
+.margin-sm {
+  margin: 20rpx;
+}
+
+.fr {
+  float: right;
+}
+
+.kb {
+  width: 100%;
+  height: 200rpx;
+}
+
+.btn-back {
+  color: #fff;
+  border: 0rpx;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  overflow: visible;
+  margin-left: initial;
+  transform: translate(0rpx, 0rpx);
+  margin-right: initial;
+  background-image: linear-gradient(270deg, #118ee9 0%, #4990e2 100%);
+  min-height: 100rpx;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+}
+
+.btn-back ::after {
+  display: none;
+}
+
+.from {
+  background: #fff;
+  padding: 1rpx 30rpx;
+  display: flex;
+  align-items: center;
+  min-height: 80rpx;
+  justify-content: space-between;
+}
+
+.from .title {
+  font-weight: bold;
+  font-size: 28rpx;
+  color: #000;
+  line-height: 80rpx;
+}

@@ -1,1 +1,91 @@
-/* pages/personaldetails/personaldetails.wxss */
+.item {
+  margin: 20rpx;
+  position: relative;
+  display: flex;
+  padding-right: 10rpx;
+  height: 140rpx;
+  background-color: var(--white);
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.avatar {
+  position: absolute;
+  left: 30rpx;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  background-size: cover;
+  background-position: center;
+  vertical-align: middle;
+  font-size: 1.5em;
+  height: 120rpx;
+  width: 120rpx;
+  background: #d8d8d8;
+  border-radius: 4rpx;
+}
+
+.content {
+  position: absolute;
+  left: 180rpx;
+  width: calc(100% - 96rpx - 60rpx - 120rpx - 20rpx);
+  line-height: 1.6em;
+}
+
+.title {
+  font-family: PingFangSC-Medium;
+  font-size: 34rpx;
+  color: #333;
+  font-weight: bold;
+  letter-spacing: 0.55rpx;
+}
+
+.more {
+  font-size: 28rpx;
+  color: #999;
+  letter-spacing: 0.45px;
+}
+
+page {
+  background: #fff;
+}
+
+.line {
+  height: 2rpx;
+  width: 100%;
+  background: #eee;
+}
+
+.from {
+  margin-left: 20rpx;
+  padding: 1rpx 30rpx;
+  display: flex;
+  align-items: center;
+  min-height: 100rpx;
+  justify-content: space-between;
+}
+
+.from+.from {
+  border-top: 2rpx solid #eee;
+}
+
+.from .title {
+  text-align: justify;
+  padding-right: 30rpx;
+  font-size: 30rpx;
+  position: relative;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.from input {
+  flex: 1;
+  text-align: right;
+  font-size: 30rpx;
+  color: #555;
+  padding-right: 20rpx;
+}

@@ -1,2 +1,71 @@
-<!--pages/personaldetails/personaldetails.wxml-->
-<text>pages/personaldetails/personaldetails.wxml</text>
+<view class="item">
+  <image class="avatar"></image>
+  <view class="content">
+    <view class="title">
+      未授权
+    </view>
+    <view class="more">
+      点击获取授权
+    </view>
+  </view>
+  <view class="action iconfont icon-right"></view>
+</view>
+
+<view class="line"></view>
+
+<view class="from">
+  <view class="title">
+    昵称：
+  </view>
+  <input placeholder="详细信息"></input>
+  <view class="iconfont icon-right"></view>
+</view>
+<view class="from">
+  <view class="title">
+    收获地址：
+  </view>
+  <input placeholder="详细信息"></input>
+  <view class="iconfont icon-right"></view>
+</view>
+<view class="from">
+  <view class="title">
+    手机号：
+  </view>
+  <input placeholder="详细信息"></input>
+  <view class="iconfont icon-right"></view>
+</view>
+<view class="from">
+  <view class="title">
+    性别：
+  </view>
+  <input placeholder="详细信息"></input>
+  <view class="iconfont icon-right"></view>
+</view>
+<view class="from">
+  <view class="title">
+    生日：
+  </view>
+  <input placeholder=""></input>
+  <view class="iconfont icon-right"></view>
+</view>
+<view class="from">
+  <view class="title">
+    地区：
+  </view>
+  <input placeholder=""></input>
+  <view class="iconfont icon-right"></view>
+</view>
+<view class="from">
+  <view class="title">
+    通行二维码：
+  </view>
+  <input placeholder=""></input>
+  <view class="iconfont icon-right"></view>
+</view>
+<view class="from">
+  <view class="title">
+    所在小区：
+  </view>
+  <input placeholder="详细信息"></input>
+  <view class="iconfont icon-right"></view>
+</view>

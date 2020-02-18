@@ -1,66 +1,21 @@
-// pages/personaldetails/personaldetails.js
+/* 社区疫情防疫 */
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
+  /* 数据 */
+  data: {},
+  /* 页面加载 */
+  onLoad(options) {},
+  /* 页面载入 */
+  onReady() { },
+  /* 页面显示 */
+  onShow() { },
+  /* 页面隐藏 */
+  onHide() { },
+  /* 页面卸载 */
+  onUnload() { },
+  /* 页面下拉刷新 */
+  onPullDownRefresh() { },
+  /* 页面触底 */
+  onReachBottom() { },
+  /* 页面分享 */
+  onShareAppMessage() { }
 })
