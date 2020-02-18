@@ -49,15 +49,31 @@ page,
 }
 .skipUl>navigator>view>text{
   display: block;
+  width: 100%;
 }
 .skipUl>navigator>view>text:nth-of-type(1){
   font-weight: bold;
   color: #333;
   font-size: 30rpx;
+  display: -webkit-box;
+  -webkit-line-clamp:1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.skipUl>navigator>view{
+  padding-left: 20rpx;
+  width: calc(100% - 100rpx);
 }
 .skipUl>navigator>view>text:nth-of-type(2){
-  color: #999;
   font-size: 24rpx;
+  color: #999;
+  line-height: 40rpx;
+  display: -webkit-box;
+  -webkit-line-clamp:1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .skipUl>navigator>image{
   display: block;

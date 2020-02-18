@@ -18,7 +18,10 @@ page,
   border-radius: 10rpx;
   overflow: hidden;
 }
-
+.banner swiper swiper-item{
+  border-radius: 10rpx;
+  overflow: hidden;
+}
 .banner swiper,
 .banner swiper image{
   display: block;

@@ -1,13 +1,8 @@
-<!--pages/virusmap/virusmap.wxml-->
+<!-- 疫情地图 -->
 <view class="page">
   <!-- 焦点图 -->
   <view class="banner">
-    <view>
-      <view class="banner-title">
-        <view>疫情防控</view>
-        <text>我们在行动</text>
-      </view>
-    </view>
+      <image mode="widthFix" src="../../common/image/mapBanner.png"></image>
   </view>
   <!-- map.wxml -->
   <view class="map">
