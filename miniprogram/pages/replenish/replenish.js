@@ -62,20 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  toSituationsupplement: function() {
-    wx.navigateTo({
-      url: '/pages/situationsupplement/situationsupplement',
-    })
-  },
-  toCommunityreport: function () {
-    wx.navigateTo({
-      url: '/pages/communityreport/communityreport',
-    })
-  },
-  toReportrecord: function () {
-    wx.navigateTo({
-      url: '/pages/reportrecord/reportrecord',
-    })
   }
 })
