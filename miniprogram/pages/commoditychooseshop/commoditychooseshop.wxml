@@ -1,0 +1,31 @@
+<view class="container">
+  <!-- 焦点图 -->
+  <view class="banner">
+    <view class="flex text-center text-white">
+      <view class="flex-sub active" bindtap="tabSelect" data-id="1">
+        超市类
+      </view>
+      <view class="flex-sub" bindtap="tabSelect" data-id="2">
+        蔬果类
+      </view>
+      <view class="flex-sub" bindtap="tabSelect" data-id="3">
+        药物
+      </view>
+    </view>
+  </view>
+  <view class="mainbody">
+    <view wx:for="{{4}}">
+      <view class="list-box">
+        <image class="avatar" src="https://wx.qlogo.cn/mmopen/vi_32/ajNVdqHZLLAFZw5gAn8pnNwl14H13flYzdkmFLHnmajmUK3nh9uyeKnp0AkMqKVQp363STIY6dyf90gElYiar2g/132"></image>
+        <view>
+          <view>七个字超市名字</view>
+          <view class="phone">13813813138</view>
+        </view>
+        <view class="connect">
+          <image class="connect-icon" src="../../common/image/icon-phone.png"></image>
+          <image class="connect-icon" bindtap="booking" src="../../common/image/icon-chat.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
