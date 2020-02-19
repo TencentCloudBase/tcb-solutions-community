@@ -51,7 +51,7 @@
   <view class="nearbyUl">
     <view class="nearbyTitle">
       <view>
-        <text>定位<text class="active">3km</text>内发现1处疫情</text>
+        <text>定位<text class="active">3km</text>内发现 <text style="color:red;">1</text> 处疫情</text>
         <text>出行请做好防护准备</text>
       </view>
       <button open-type="share">分享</button>
