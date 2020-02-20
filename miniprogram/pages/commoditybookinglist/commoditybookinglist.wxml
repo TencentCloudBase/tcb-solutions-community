@@ -1,0 +1,39 @@
+<view class="container">
+  <!-- 焦点图 -->
+  <view class="banner">
+    <view>
+      <image class="avatar" src="https://wx.qlogo.cn/mmopen/vi_32/ajNVdqHZLLAFZw5gAn8pnNwl14H13flYzdkmFLHnmajmUK3nh9uyeKnp0AkMqKVQp363STIY6dyf90gElYiar2g/132"></image>
+      <view class="info">
+        <text>瞬旺超市</text>
+      </view>
+    </view>
+  </view>
+  <view class="mainbody">
+    <text class="infomation">采购信息</text>
+    <view class="list-box">
+      <view>
+      <view class="title">莲花小区</view>  
+      <view class="content">清扬洗发水一瓶</view>
+      <view class="order-number">订单号：12034121210000</view>
+      </view>
+      <view class="action-btn">接单</view>
+    </view> <view class="list-box">
+      <view>
+      <view class="title">莲花小区</view>  
+      <view class="content">清扬洗发水一瓶</view>
+      <view class="order-number">订单号：12034121210000</view>
+      </view>
+      <view class="action-btn">接单</view>
+    </view> <view class="list-box">
+      <view>
+      <view class="title">莲花小区</view>  
+      <view class="content">清扬洗发水一瓶</view>
+      <view class="order-number">订单号：12034121210000</view>
+      </view>
+      <view class="action-btn">接单</view>
+    </view>
+    <view class="infomation">
+      <view><text>使用规则</text></view>
+    </view>
+  </view>
+</view>

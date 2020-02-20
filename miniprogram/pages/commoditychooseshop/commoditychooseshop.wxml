@@ -2,13 +2,13 @@
   <!-- 焦点图 -->
   <view class="banner">
     <view class="flex text-center text-white">
-      <view class="flex-sub active" bindtap="tabSelect" data-id="1">
+      <view class="flex-sub {{1==TabCur?'active':''}} " bindtap="tabSelect" data-id="1">
         超市类
       </view>
-      <view class="flex-sub" bindtap="tabSelect" data-id="2">
+      <view class="flex-sub {{2==TabCur?'active':''}} " bindtap="tabSelect" data-id="2">
         蔬果类
       </view>
-      <view class="flex-sub" bindtap="tabSelect" data-id="3">
+      <view class="flex-sub {{3==TabCur?'active':''}} " bindtap="tabSelect" data-id="3">
         药物
       </view>
     </view>
