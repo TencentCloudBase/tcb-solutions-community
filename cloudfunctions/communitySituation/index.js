@@ -15,6 +15,15 @@ exports.main = async (event, context) => {
     case "check":{
       return check(event)
     }
+    case "list":{
+      return list(event)
+    }
+    case "addIsolatedPersonnel":{
+      return addIsolatedPersonnel(event)
+    }
+    case "listIsolatedPersonnel":{
+      return listIsolatedPersonnel(event)
+    }
   }
 }
 
