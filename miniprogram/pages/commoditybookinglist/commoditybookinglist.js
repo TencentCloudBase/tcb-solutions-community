@@ -1,11 +1,11 @@
-// miniprogram/pages/commoditychooseshop/commoditychooseshop.js
+// miniprogram/pages/commoditybookinglist/commoditybookinglist.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    TabCur: 1
+
   },
 
   /**
@@ -62,19 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  /**
-   * 用户自定义函数
-   */
-  tabSelect(e) {
-    this.setData({
-      TabCur: e.currentTarget.dataset.id,
-    })
-  },
-  booking:function(){
-    wx.navigateTo({
-      url: '../commoditybooking/commoditybooking?id=1&page=4',
-    })
   }
 })

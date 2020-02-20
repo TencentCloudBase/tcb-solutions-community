@@ -1,0 +1,80 @@
+page, .container {
+  background: #fff;
+}
+
+/* banner */
+
+.banner {
+  width: 100%;
+  height: 250rpx;
+  background: #4a90e2;
+  position: relative;
+  box-sizing: border-box;
+  padding: 20rpx 0;
+  margin-bottom: 20rpx;
+}
+
+.banner>view {
+  margin: 20rpx auto 0;
+  width: 90%;
+  overflow: hidden;
+  display: flex;
+}
+
+.banner>view>.avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+
+.banner>view>.info {
+  margin-left: 20rpx;
+  width: 500rpx;
+  color: white;
+}
+
+/* banner end */
+
+/* mainbody */
+
+.mainbody {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* mainbody end */
+
+/* 说明部分 */
+
+.infomation {
+  color: #4a90e2;
+}
+
+/* 说明部分结束 */
+
+.list-box {
+  display: flex;
+  position: relative;
+  height: 150rpx;
+  margin-top: 10rpx;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  background-color: #f1f8ff;
+}
+.order-number{
+
+  color: #999999;
+  font-size: 0.8rem;
+
+}
+.action-btn {
+  width: 100rpx;
+  height: 50rpx;
+  margin-left: auto;
+  margin-top:50rpx;
+  margin-right: 20rpx; 
+  background: linear-gradient(#00c8fe 0, #4facfe 100%);
+  border-radius: 10rpx;
+  text-align: center;
+  color: white;
+}

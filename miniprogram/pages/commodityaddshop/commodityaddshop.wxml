@@ -1,0 +1,60 @@
+<view class="top-bg">
+  <image style="width:100%;" mode="widthFix" src="cloud://cloud-tcb.636c-cloud-tcb-1301077292/images/bg-header.gif" />
+  <view class="tipText">商家信息登记</view>
+</view>
+<!-- 表单提交 -->
+
+<view class="from">
+  <view class="title">
+    商店名称
+  </view>
+  <input placeholder="请输入商店名称"> </input>
+  <view></view>
+</view>
+<view class="from">
+  <view class="title">
+    商店类型
+  </view>
+  <input></input>
+  <view class="action iconfont icon-right"></view>
+
+</view>
+<view class="from">
+  <view class="title">
+    负责人姓名
+  </view>
+  <input placeholder="请输入商店负责人姓名"></input>
+  <view></view>
+</view>
+<view class="from">
+  <view class="title">
+    负责人电话
+  </view>
+  <input type="mnuber" maxlength="11" placeholder="请输入商店负责人电话"></input>
+  <view></view>
+</view>
+<view class="from">
+  <view class="title">
+    商店地址
+  </view>
+  <input placeholder="请输入商店地址"></input>
+  <view></view>
+</view>
+<view class="from">
+  <view class="title">
+    营业时间
+  </view>
+  <input placeholder="请输入营业时间"></input>
+  <view></view>
+</view>
+<view class="from">
+  <view class="title">
+    服务小区
+  </view>
+  <input placeholder="请选择服务小区"></input>
+  <view></view>
+</view>
+
+<view class="btn-back">
+  提交
+</view>
