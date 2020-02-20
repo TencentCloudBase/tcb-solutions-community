@@ -31,14 +31,14 @@
         <text>刷脸取快递</text>
       </view>
     </navigator>
-    <navigator hover-class="opacity5" url="/pages/punchcardlist/punchcardlist">
+    <navigator hover-class="opacity5" url="/pages/commodityaddshop/commodityaddshop">
       <image mode="widthFix" src="../../common/image/icon-addUser.png"></image>
       <view>
         <text>商家入驻</text>
         <text>商家信息登记</text>
       </view>
     </navigator>
-    <navigator hover-class="opacity5" url="/pages/virusmap/virusmap">
+    <navigator hover-class="opacity5" url="/pages/commodityaddshop/commodityaddshop">
       <image mode="widthFix" src="../../common/image/icon-setting.png"></image>
       <view>
         <text>商家管理</text>
