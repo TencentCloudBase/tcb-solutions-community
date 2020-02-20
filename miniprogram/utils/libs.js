@@ -46,7 +46,7 @@ Page = function (app) {
     app.onShareAppMessage = function () {
       return {
         title: "战‘疫’时刻，有所持而不恐。见“疫”隔离，守卫您的家园。",
-        imageUrl: "https://636c-cloud-tcb-1301077292.tcb.qcloud.la/images/share.png",
+        imageUrl: "../../common/image/share.png",
         path: '/pages/index/index'
       }
     }
