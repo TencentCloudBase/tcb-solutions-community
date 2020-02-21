@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "openapi": [
+      "templateMessage.send"
+    ]
+  },
+  "redis": {
+    "host": "",
+    "password": "",
+    "adminTokenKey": ""
+  },
+  "templateId":""
+}
