@@ -1,69 +1,84 @@
-.punchin{
+.punchin {
   height: 100vh;
   background-color: white;
 }
-.stats{
+
+.stats {
   font-size: 30rpx;
   font-weight: bold;
   padding: 20rpx 0;
   margin: 20rpx;
 }
-.form{
+
+.form {
   margin: 0 20rpx;
 }
-.stats text{
-  color: #458FE0;
+
+.stats text {
+  color: #458fe0;
 }
-.box{
+
+.box {
   border-radius: 10rpx;
-  box-shadow: 0 0 10rpx rgba(0,0,0,.1);
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
   background-color: white;
   padding: 10rpx 20rpx;
-  border: solid 1px rgba(0,0,0,.1);
+  border: solid 1px rgba(0, 0, 0, 0.1);
 }
-.box+.box{
+
+.box+.box {
   margin-top: 30rpx;
 }
-.other{
+
+.other {
   margin: 20rpx 0;
 }
-.label{
+
+.label {
   font-size: 24rpx;
   color: #999;
 }
-.input{
+
+.input {
   color: #333;
   font-size: 30rpx;
 }
-.radios{
+
+.radios {
   overflow: auto;
   padding: 10rpx 0;
 }
-.radios .box{
+
+.radios .box {
   position: relative;
   height: 160rpx;
   width: 300rpx;
   margin-top: 0;
   padding-top: 40rpx;
 }
-.radios .box radio{
+
+.radios .box radio {
   position: absolute;
   right: 0;
   top: 0;
   border-radius: 50%;
-  transform: scale(.8);
+  transform: scale(0.8);
 }
-.radios .box text{
+
+.radios .box text {
   display: block;
 }
-.box .title{
+
+.box .title {
   font-size: 30rpx;
   font-weight: bold;
 }
-.radios .box+.box{
+
+.radios .box+.box {
   margin-left: 10rpx;
 }
-.button.button-primary.btn-back{
+
+.button.button-primary.btn-back {
   margin: 0;
   width: 100%;
   bottom: 0;
@@ -71,15 +86,25 @@
   left: 0;
   border-radius: 0;
 }
-@media only screen and (device-width: 414px) and (device-height:896px) and (-webkit-device-pixel-ratio:3){
-  .btn-back{
+
+@media only screen and (device-width: 414px) and (device-height:896px) and (-webkit-device-pixel-ratio:3) {
+  .btn-back {
     height: 120rpx !important;
     line-height: 90rpx !important;
   }
+
+  .punch-list, page {
+    padding-bottom: 160rpx !important;
+  }
 }
+
 @media only screen and (device-width: 375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) {
-  .btn-back{
+  .btn-back {
     height: 120rpx !important;
     line-height: 90rpx !important;
+  }
+
+  .punch-list, page {
+    padding-bottom: 160rpx !important;
   }
 }

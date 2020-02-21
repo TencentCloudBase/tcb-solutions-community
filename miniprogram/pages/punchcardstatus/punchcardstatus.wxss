@@ -1,17 +1,20 @@
-.punch-status{
+.punch-status {
   height: 100vh;
   overflow: hidden;
 }
-.punch-status.status-succ{
+
+.punch-status.status-succ {
   background-color: #458fe0;
   padding: 20rpx;
 }
-.punch-status.status-warn{
+
+.punch-status.status-warn {
   background-color: #fff;
   position: relative;
   padding: 60% 20rpx 20rpx 20rpx;
 }
-.punch-status.status-warn::before{
+
+.punch-status.status-warn::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -20,9 +23,10 @@
   top: 100rpx;
   left: -80rpx;
   border-radius: 50%;
-  background-color: #EC5C3B;
+  background-color: #ec5c3b;
 }
-.punch-status.status-warn::after{
+
+.punch-status.status-warn::after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -31,44 +35,54 @@
   width: 100rpx;
   height: 100rpx;
   border-radius: 50%;
-  background-color: #F6C24E;
+  background-color: #f6c24e;
 }
-.status{
+
+.status {
   padding-bottom: 40rpx;
   color: #fff;
 }
-.status-warn .status{
+
+.status-warn .status {
   color: #333;
 }
-.status .iconfont{
+
+.status .iconfont {
   font-size: 100rpx;
 }
-.status .big{
+
+.status .big {
   font-size: 40rpx;
   font-weight: bold;
 }
-.box{
+
+.box {
   border-radius: 10rpx;
-  box-shadow: 0 0 10rpx rgba(0,0,0,.1);
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
   background-color: white;
   padding: 10rpx 20rpx;
 }
-.box+.box{
+
+.box+.box {
   margin-left: 20rpx;
 }
-.label{
+
+.label {
   font-size: 24rpx;
   color: #999;
 }
-.row+.row{
+
+.row+.row {
   margin-top: 20rpx;
 }
-.panel{
+
+.panel {
   background-color: #fff;
   border-radius: 20rpx 20rpx 0 0;
   padding: 50rpx 20rpx;
 }
-.button.button-primary.btn-back{
+
+.button.button-primary.btn-back {
   margin: 0;
   width: 100%;
   bottom: 0;
@@ -76,18 +90,29 @@
   left: 0;
   border-radius: 0;
 }
-.button.btn-warn{  
-  background-image: linear-gradient(to right, #EC5C3B , #F6C24E);
+
+.button.btn-warn {
+  background-image: linear-gradient(to right, #ec5c3b, #f6c24e);
 }
-@media only screen and (device-width: 414px) and (device-height:896px) and (-webkit-device-pixel-ratio:3){
-  .btn-back{
+
+@media only screen and (device-width: 414px) and (device-height:896px) and (-webkit-device-pixel-ratio:3) {
+  .btn-back {
     height: 120rpx !important;
     line-height: 90rpx !important;
   }
+
+  .punch-list, page {
+    padding-bottom: 160rpx !important;
+  }
 }
+
 @media only screen and (device-width: 375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) {
-  .btn-back{
+  .btn-back {
     height: 120rpx !important;
     line-height: 90rpx !important;
+  }
+
+  .punch-list, page {
+    padding-bottom: 160rpx !important;
   }
 }

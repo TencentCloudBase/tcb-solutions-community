@@ -1,45 +1,49 @@
-.punch-list{
-  border: solid rgba(0,0,0,.05);
+.punch-list {
+  border: solid rgba(0, 0, 0, 0.05);
   border-width: 1rpx 0;
   padding: 0 40rpx 80rpx 40rpx;
 }
 
-.header{
+.header {
   font-size: 28rpx;
   color: #333;
 }
 
-.header .icon{
+.header .icon {
   width: 30rpx;
   height: 30rpx;
-  background-color: #5B90DC;
+  background-color: #5b90dc;
   margin-right: 20rpx;
 }
 
-.item{
+.item {
   padding: 30rpx 0;
-  border-bottom: solid 2rpx rgba(0,0,0,.05);
+  border-bottom: solid 2rpx rgba(0, 0, 0, 0.05);
 }
 
-.title{
+.title {
   font-size: 28rpx;
   font-weight: bold;
   margin: 10rpx 0 20rpx 0;
 }
-.date{
+
+.date {
   font-size: 26rpx;
-  color: rgba(0,0,0,.3);
+  color: rgba(0, 0, 0, 0.3);
 }
-.img{
+
+.img {
   width: 160rpx;
   margin-left: 30rpx;
 }
-.img image{
+
+.img image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.button.button-primary.btn-back{
+
+.button.button-primary.btn-back {
   margin: 0;
   width: 100%;
   bottom: 0;
@@ -47,15 +51,25 @@
   left: 0;
   border-radius: 0;
 }
-@media only screen and (device-width: 414px) and (device-height:896px) and (-webkit-device-pixel-ratio:3){
-  .btn-back{
+
+@media only screen and (device-width: 414px) and (device-height:896px) and (-webkit-device-pixel-ratio:3) {
+  .btn-back {
     height: 120rpx !important;
     line-height: 90rpx !important;
   }
+
+  .punch-list, page {
+    padding-bottom: 160rpx !important;
+  }
 }
+
 @media only screen and (device-width: 375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) {
-  .btn-back{
+  .btn-back {
     height: 120rpx !important;
     line-height: 90rpx !important;
+  }
+
+  .punch-list, page {
+    padding-bottom: 160rpx !important;
   }
 }
