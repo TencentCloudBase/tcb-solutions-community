@@ -2,13 +2,14 @@
 const cloud = require('wx-server-sdk')
 const sm2 = require('miniprogram-sm-crypto').sm2;
 const Redis = require('ioredis');
+const config = require('./config.json');
 
 const redis = new Redis({
-  port: 6379, // Redis port
-  host: '10.0.0.10',
-  family: 4,// 4 (IPv4) or 6 (IPv6)
-  password: 'tcb12345678',
-  db: 2,
+  port: 6379,
+  host: config.redis.host,
+  family: 4,
+  password: config.redis.password,
+  db: 0,
 });
 cloud.init({ env: 'cloud-tcb' });
 
@@ -17,27 +18,35 @@ exports.main = async (event, context) => {
 
   const wxContext = cloud.getWXContext()
 
-  var cacheKey = 'tcbst:admin:pubKey:' + event.serial.replace(/-/g, '');
-  var publicKey = await redis.get(cacheKey);
-  var timestamp = Math.round(new Date().getTime() / 1000);
+  try{
 
-  var msg = JSON.stringify({
-    serial: event.serial,
-    unionid: wxContext.UNIONID,
-    env: wxContext.ENV,
-    source: wxContext.SOURCE,
-    openid: wxContext.OPENID,
-    info: event.info,
-    timestamp: timestamp
-  });
-  var cipherMode = 1;
-  var encryptData = sm2.doEncrypt(msg, publicKey, cipherMode); //加密
+    var cacheKey = config.redis.visitCodePubKey + event.serial.replace(/-/g, '');
+    var publicKey = await redis.get(cacheKey);
+    var timestamp = Math.round(new Date().getTime() / 1000);
 
-  return {
-    error: null,
-    requestId: event.requestId,
-    openid: wxContext.OPENID,
-    passData: encryptData,
-    serial: event.serial
-  }
-}
+    var msg = JSON.stringify({
+      serial: event.serial,
+      unionid: wxContext.UNIONID,
+      env: wxContext.ENV,
+      source: wxContext.SOURCE,
+      openid: wxContext.OPENID,
+      info: event.info,
+      timestamp: timestamp
+    });
+    var cipherMode = 1;
+    var encryptData = sm2.doEncrypt(msg, publicKey, cipherMode); //加密
+
+    return {
+      error: null,
+      requestId: event.requestId,
+      openid: wxContext.OPENID,
+      passData: encryptData,
+      serial: event.serial
+    };
+
+  }catch(error){
+    console.log(error);
+    return { error: error };
+  };
+
+};
