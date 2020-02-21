@@ -1,7 +1,7 @@
 {
   "redis": {
-    "host": "127.0.0.1",
-    "password": "c12345679",
-    "adminTokenKey": "tcbst:admin:token:"
+    "host": "",
+    "password": "",
+    "adminTokenKey": ""
   }
 }

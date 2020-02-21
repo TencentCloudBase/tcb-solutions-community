@@ -1,8 +1,8 @@
 {
   "redis": {
-    "host": "10.0.0.10",
-    "password": "tcb12345678",
-    "adminTokenKey": "tcbst:admin:token:",
-    "visitCodePriKey:": "tcbst:visitCode:priKey:"
+    "host": "",
+    "password": "",
+    "adminTokenKey": "",
+    "visitCodePriKey:": ""
   }
 }

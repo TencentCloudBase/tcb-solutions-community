@@ -1,7 +1,7 @@
 {
   "redis": {
-    "host": "10.0.0.10",
-    "password": "tcb12345678",
-    "goodsNoKey": "tcbst:goods:orderNumber"
+    "host": "",
+    "password": "",
+    "goodsNoKey": ""
   }
 }
