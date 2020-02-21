@@ -45,7 +45,6 @@ Page({
         imgUrl: 'cloud://cloud-tcb.636c-cloud-tcb-1301077292/images/3_1.png',
       },
     ]
-
   },
 
   toCheckIn(){

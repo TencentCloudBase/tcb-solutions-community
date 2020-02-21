@@ -1,4 +1,4 @@
-<view class="punch-list">
+<view class="punch-list" style='padding-bottom:{{isIphoneX ? "68rpx" : "0"}}'>
   <view class="item flex flex-column" wx:for="{{list}}" wx:for-index="i" wx:key="item">
     <view class="header flex align-center">
       <text class="icon flex-none"></text>
@@ -14,5 +14,5 @@
       </view>
     </view>
   </view>  
-  <button bindtap="toCheckIn" class="fixed btn-back flex-none button button-primary">为爱打卡</button>
+  <button bindtap="toCheckIn" class="fixed btn-back flex-none button button-primary">为爱打卡{{isIphoneX}}</button>
 </view>
