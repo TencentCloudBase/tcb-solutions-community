@@ -1,15 +1,18 @@
 <view class="punch-list">
-  <view class="item flex flex-column" wx:for="{{4}}" wx:key="item">
+  <view class="item flex flex-column" wx:for="{{list}}" wx:for-index="i" wx:key="item">
     <view class="header flex align-center">
       <text class="icon flex-none"></text>
-      打卡第一天
+      打卡第 {{(list.length - i)}} 天
     </view>
     <view class="body flex">
       <view class="flex-auto">
-        <view class="title maxline2">今天体温37度，一切正常，还需要更多营养补充，希望明天一切正常，还能出门出去购物</view>
-        <view class="date">1小时前</view>
+        <view class="title maxline2">{{item.content}}</view>
+        <view class="date">{{item.date}}</view>
       </view>
-      <view class="flex-none img"></view>
+      <view class="flex-none img">
+        <image src="{{item.imgUrl}}" mode="aspectFill" />
+      </view>
     </view>
-  </view>
+  </view>  
+  <button bindtap="toCheckIn" class="fixed btn-back flex-none button button-primary">为爱打卡</button>
 </view>
