@@ -6,7 +6,7 @@
   </view>
   <view class="status flex-none flex align-center flex-column" wx:else>
     <view class="big">您的体温达到了</view>
-    <view class="big">{{temp}}度</view>
+    <view class="big">{{temp}}℃</view>
     <view class="small gray">请尽快就医 避免与他人接触</view>
   </view>
   <view class="panel flex-auto">
@@ -21,9 +21,9 @@
       </view>
       <view class="box flex-auto">
         <view class="label">体温</view>
-        <text>{{temp}}</text>
+        <text>{{temp}}℃</text>
       </view>
     </view>
   </view>
-  <button class="fixed btn-back btn-{{type}} flex-none button button-primary">回到主页</button>
+  <button bindtap="toHomePage" class="fixed btn-back btn-{{type}} flex-none button button-primary">回到主页</button>
 </view>

@@ -47,3 +47,15 @@
   left: 0;
   border-radius: 0;
 }
+@media only screen and (device-width: 414px) and (device-height:896px) and (-webkit-device-pixel-ratio:3){
+  .btn-back{
+    height: 120rpx !important;
+    line-height: 90rpx !important;
+  }
+}
+@media only screen and (device-width: 375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) {
+  .btn-back{
+    height: 120rpx !important;
+    line-height: 90rpx !important;
+  }
+}
