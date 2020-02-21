@@ -119,11 +119,21 @@ function json2Form(json) {
   }
   return str.join("&");
 } 
+
+/**
+ * 格式化日期
+ */
+const formatDate = (cellval) => {
+  const t = new Date(cellval).toJSON();
+  const date = new Date(+new Date(t) + 8 * 3600 * 1000).toISOString().replace(/T/g, ' ').replace(/\.[\d]{3}Z/, '')
+  return date;
+}
 module.exports = {
   randomNum,
   converMbSize,
   converSize,
   checkImage,
   checkFont,
-  json2Form
+  json2Form,
+  formatDate
 }

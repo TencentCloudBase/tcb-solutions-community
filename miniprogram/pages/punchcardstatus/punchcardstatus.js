@@ -1,11 +1,13 @@
-
+const dayjs = require("./../../utils/dayjs.min.js");
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    type: "warn" // ["succ", "warn"]
+    date: dayjs().format('YYYY-MM-DD'),
+    temp: 37.1,
+    type: "succ" // ["succ", "warn"]
   },
 
   /**
@@ -13,8 +15,15 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      type: options.type
+      temp: options.temp,
+      date: options.date
     })
+    const normalTemp = 37.2;
+    if (options.temp > normalTemp){
+      this.setData({
+        type: 'warn'
+      });
+    }
   },
 
   /**
