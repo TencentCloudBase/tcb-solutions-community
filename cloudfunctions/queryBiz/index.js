@@ -20,63 +20,72 @@ exports.main = async (event, context) => {
 
   try {
 
-    var cacheKey = config.redis.adminTokenKey + event.token;
-    var value = await redis.get(cacheKey);
-    value = JSON.parse(value);
+    var result = null;
+    if (event.type == 1){
+      /*****业主普通用户 */
+      result = await db.collection('tcbst_biz').where({
+        area_id: event.areaId
+      }).get();
+    }else{
+      /**********管理员 */
+      let cacheKey = config.redis.adminTokenKey + event.token;
+      let value = await redis.get(cacheKey);
+      value = JSON.parse(value);
 
-    if (value.openid == wxContext.OPENID) {
+      if (value.openid == wxContext.OPENID) {
 
-      var queryData = {
-        area_id: value.areaId
-      };
-
-      if (event.bizName != null) {
-        queryData.biz_name = event.bizName;
-      };
-      if (event.address != null) {
-        queryData.address = event.address;
-      };
-      if (event.bizCode != null) {
-        queryData.biz_code = event.bizCode;
-      };
-      if (event.telephone != null) {
-        queryData.telephone = event.telephone;
-      };
-
-      /*********云数据库存储查询  **************/
-      let result = await  db.collection('tcbst_biz').where(queryData).get();
-
-      let list = [];
-      if (result.data.length > 0) {
-
-        for (let i = 0; i < result.data.length; i++) {
-          list.push({
-            bizCode: result.data[i].biz_code,
-            bizName: result.data[i].biz_name,
-            address: result.data[i].address,
-            telephone: result.data[i].telephone,
-            dept: result.data[i].dept,
-            contacts: result.data[i].contacts,
-            mobile: result.data[i].mobile,
-            msg: result.data[i].msg,
-            place: result.data[i].place,
-            type: result.data[i].type,
-            typeDesc: result.data[i].typeDesc,
-            attach: result.data[i].attach
-          });
+        var queryData = {
+          area_id: value.areaId
         };
 
-      };
-      
-      return {
-        requestId: event.requestId,
-        error: null,
-        list: list,
-        timestamp: Math.round(new Date().getTime() / 1000)
+        if (event.bizName != null) {
+          queryData.biz_name = event.bizName;
+        };
+        if (event.address != null) {
+          queryData.address = event.address;
+        };
+        if (event.bizCode != null) {
+          queryData.biz_code = event.bizCode;
+        };
+        if (event.telephone != null) {
+          queryData.telephone = event.telephone;
+        };
+
+        result = await db.collection('tcbst_biz').where(queryData).get();
+
+      }else {
+        return { error: 'token data is error' };
       };
 
-    } else {
-      return { error: 'token data is error' };
+    };
+    
+    var list = [];
+    if (result.data.length > 0) {
+
+      for (let i = 0; i < result.data.length; i++) {
+        list.push({
+          bizCode: result.data[i].biz_code,
+          bizName: result.data[i].biz_name,
+          address: result.data[i].address,
+          telephone: result.data[i].telephone,
+          dept: result.data[i].dept,
+          contacts: result.data[i].contacts,
+          mobile: result.data[i].mobile,
+          msg: result.data[i].msg,
+          place: result.data[i].place,
+          type: result.data[i].type,
+          typeDesc: result.data[i].typeDesc,
+          attach: result.data[i].attach
+        });
+      };
+
+    };
+
+    return {
+      requestId: event.requestId,
+      error: null,
+      list: list,
+      timestamp: Math.round(new Date().getTime() / 1000)
     };
 
   }catch(error){
