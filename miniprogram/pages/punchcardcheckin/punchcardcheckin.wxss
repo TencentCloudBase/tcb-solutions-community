@@ -57,7 +57,7 @@
   padding-top: 40rpx;
 }
 
-.radios .box radio {
+.radios .box checkbox {
   position: absolute;
   right: 0;
   top: 0;

@@ -17,7 +17,7 @@
     <view class="flex row justify-between">
       <view class="box flex-auto">
         <view class="label">身体状态</view>
-        <text>一切正常</text>
+        <text>{{item==0?'一切正常':'有异常症状'}}</text>
       </view>
       <view class="box flex-auto">
         <view class="label">体温</view>

@@ -16,7 +16,8 @@ Page({
   onLoad: function (options) {
     this.setData({
       temp: options.temp,
-      date: options.date
+      date: options.date,
+      item:options.item
     })
     const normalTemp = 37.2;
     if (options.temp > normalTemp){
@@ -27,9 +28,7 @@ Page({
   },
 
   toHomePage() {
-    wx.redirectTo({
-      url: '/pages/index/index',
-    })
+    wx.navigateBack();
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
