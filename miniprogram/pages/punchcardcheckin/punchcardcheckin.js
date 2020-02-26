@@ -45,7 +45,9 @@ Page({
     ],
     array: [],
     index: 20,
-    date: dayjs().format('YYYY-MM-DD')
+    date: dayjs().format('YYYY-MM-DD'),
+    des:'',
+    item:[]
   },
   bindDateChange: function (e) {
     this.setData({
@@ -58,9 +60,61 @@ Page({
     })
   },
   checkIn() {
-    const { array, index, date } = this.data;
-    wx.redirectTo({
-      url: `/pages/punchcardstatus/punchcardstatus?temp=${array[index]}&date=${date}`,
+    const { array, index, date,des,item } = this.data;
+    const showdata={
+      temp:array[index],
+      des: des,
+      date:new Date(date),
+      item :item
+    };
+    console.log(showdata);
+    wx.showLoading({
+      title: '打卡中',
+      mask:true
+    })
+    wx.cloud.callFunction({
+      name:'punchCheckin',
+      data:showdata,
+      success(res){
+        wx.hideLoading();
+        if(res.result.code==0){
+          wx.redirectTo({
+            url: `/pages/punchcardstatus/punchcardstatus?temp=${array[index]}&date=${date}&item=${item.length}`,
+          })
+        }
+        else if(res.result.code==1){
+          wx.showModal({
+            title:'错误',
+            content:'此日期已经打卡了，不能重复打卡',
+            showCancel:false
+          })
+        }
+        else{
+          wx.showModal({
+            title:'错误',
+            content:'打卡失败，网路出现故障',
+            showCancel:false
+          })
+        }
+      },
+      fail(e){
+        wx.showModal({
+          title:'错误',
+          content:'打卡失败，网路出现故障',
+          showCancel:false
+        })
+      }
+    })
+    
+  },
+  inputdes(e){
+    this.setData({
+      des: e.detail.value
+    })
+  },
+  inputitem(e){
+    this.setData({
+      item: e.detail.value
     })
   },
   bindPickerChange: function (e) {
@@ -80,7 +134,8 @@ Page({
       temps.push(temp.toFixed(1));
     }
     this.setData({
-      array: temps
+      array: temps,
+      days:options.days
     })
   },
 

@@ -1,5 +1,5 @@
 <view class="punchin flex flex-column">
-  <view class="stats flex-none">本小区已经有<text>453</text>人参加健康打卡</view>
+  <view class="stats flex-none">请开始你的第<text>{{days}}</text>天健康打卡</view>
   <view class="form flex-auto">
     <view class="box">
       <view class="label">日期</view>
@@ -19,17 +19,17 @@
     </view>
     <view class="box">
       <view class="label">备注</view>
-      <input class="input" placeholder="无明显反应"></input>      
+      <input class="input" placeholder="无明显反应" bindinput="inputdes"></input>      
     </view>
     <view class="other">
       <view class="label">其他症状</view>
-      <view class="radios flex flex-row align-center">
+      <checkbox-group class="radios flex flex-row align-center" bindchange='inputitem'>
         <label class="box flex-none flex flex-column align-start" wx:for="{{symptoms}}" wx:key="id">
-          <radio></radio> 
+          <checkbox value="{{item.title}}"></checkbox> 
           <text class="title">{{item.title}}</text>
           <text class="label">{{item.desc}}</text>
         </label>
-      </view>
+      </checkbox-group>
     </view>
   </view>
   <button bindtap="checkIn" class="fixed btn-back flex-none button button-primary">立即打卡</button>

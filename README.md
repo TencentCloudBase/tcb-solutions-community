@@ -18,11 +18,62 @@
 ## 依赖
 - 项目依赖腾讯云开发
 
+
 ## 部署说明
 - 1、将代码克隆下来，更改小程序appid
 - 2、初始化云开发
 - 3、在config.js中更改云开发名称
 - 4、上传并部署functions中的云函数方便调用
+
+## 数据集合权限
+- 1、tcbst_admin：所有用户可读，仅管理员可写
+- 2、tcbst_biz：所有用户可读，仅创建者及管理员可写
+- 3、tcbst_goods：所有用户都可以读写
+- 4、tcbst_pass_info：所有用户可读，仅创建者及管理员可写
+- 5、tcbst_user：仅创建者及管理员可读写
+- 6、tcbst_visit_code：所有用户可读，仅创建者及管理员可写
+
+## 云函数与数据表对应关系
+- 1、云函数名：login
+   使用数据集合：tcbst_user
+- 2、云函数名：signIn
+   使用数据集合：tcbst_admin
+
+- 3、云函数名：updateUser
+   使用数据集合：tcbst_user
+
+- 4、云函数名：getVisitCode
+   使用数据集合：tcbst_admin、tcbst_visit_code
+
+- 5、云函数名：getAreaInfo
+   使用数据集合：tcbst_visit_code
+
+- 6、云函数名：getPassCode
+   使用数据集合：无
+
+- 7、云函数名：checkPassCode
+   使用数据集合：tcbst_visit_code、tcbst_pass_info
+
+- 8、云函数名：registBiz
+   使用数据集合：tcbst_biz
+
+- 9、云函数名：queryBiz
+   使用数据集合：tcbst_biz
+
+- 10、云函数名：updateBiz
+   使用数据集合：tcbst_biz
+
+- 11、云函数名：queryGoods
+   使用数据集合：tcbst_goods
+
+- 12、云函数名：updateGoods
+   使用数据集合：tcbst_goods
+
+- 13、云函数名：createGoodsOrder
+   使用数据集合：tcbst_goods
+
+- 14、云函数名：confirmGoodsOrder
+   使用数据集合：tcbst_goods
 
 ## 特别贡献
 - 特别感谢此次腾讯云组织此次开发

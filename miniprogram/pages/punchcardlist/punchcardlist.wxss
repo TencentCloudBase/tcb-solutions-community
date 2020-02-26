@@ -1,5 +1,5 @@
 .punch-list {
-  border: solid rgba(0, 0, 0, 0.05);
+  /* border: solid rgba(0, 0, 0, 0.05); */
   border-width: 1rpx 0;
   padding: 0 40rpx 80rpx 40rpx;
 }

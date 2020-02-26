@@ -1,4 +1,16 @@
-<view class="punch-list" style='padding-bottom:{{isIphoneX ? "68rpx" : "0"}}'>
+<wxs module="tools">
+  var bar = function (data) {
+    return data.slice(0, 4) + "年" + data.slice(5, 7) + "月" + data.slice(8, 10) + "日";
+  };
+  module.exports = {
+    bar:bar
+  };
+</wxs>
+<view class="punch-list">
+  <view class="header flex align-center" style="margin-top:100px" wx:if="{{list.length==0}}">
+      <text class="icon flex-none"></text>
+      暂无打卡记录
+    </view>
   <view class="item flex flex-column" wx:for="{{list}}" wx:for-index="i" wx:key="item">
     <view class="header flex align-center">
       <text class="icon flex-none"></text>
@@ -6,13 +18,13 @@
     </view>
     <view class="body flex">
       <view class="flex-auto">
-        <view class="title maxline2">{{item.content}}</view>
-        <view class="date">{{item.date}}</view>
+        <view class="title maxline2">体温：{{item.temp}} ℃ ,{{item.item.length==0?'身体一切正常':'身体有异常症状'}}</view>
+        <view class="date">{{tools.bar(item.date)}}</view>
       </view>
       <view class="flex-none img">
         <image src="{{item.imgUrl}}" mode="aspectFill" />
       </view>
     </view>
-  </view>  
+  </view>
   <button bindtap="toCheckIn" class="fixed btn-back flex-none button button-primary">为爱打卡{{isIphoneX}}</button>
 </view>
