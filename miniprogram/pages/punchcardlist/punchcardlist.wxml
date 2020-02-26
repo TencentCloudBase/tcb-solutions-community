@@ -1,20 +1,19 @@
 <wxs module="tools">
-  var bar = function (data) {
+  var bar = function(data) {
     return data.slice(0, 4) + "年" + data.slice(5, 7) + "月" + data.slice(8, 10) + "日";
   };
   module.exports = {
-    bar:bar
+    bar: bar
   };
 </wxs>
-<view class="punch-list">
-  <view class="header flex align-center" style="margin-top:100px" wx:if="{{list.length==0}}">
-      <text class="icon flex-none"></text>
-      暂无打卡记录
-    </view>
+<view class="punch-list height-full">
+  <view class="nomore height-full flex flex-column align-center justify-center" wx:if="{{list.length==0}}">
+    <text class="iconfont icon-feedback"></text>
+    暂无打卡记录
+  </view>
   <view class="item flex flex-column" wx:for="{{list}}" wx:for-index="i" wx:key="item">
     <view class="header flex align-center">
-      <text class="icon flex-none"></text>
-      打卡第 {{(list.length - i)}} 天
+      <text class="icon flex-none"></text> 打卡第 {{(list.length - i)}} 天
     </view>
     <view class="body flex">
       <view class="flex-auto">

@@ -1,30 +1,38 @@
 /**app.wxss**/
 @import "./common/style/animate.wxss";
 @import "./common/iconfont/iconfont.wxss";
-view, scroll-view, swiper, button, input, textarea, label, navigator, image,element {
+
+view, scroll-view, swiper, button, input, textarea, label, navigator, image,
+element {
   box-sizing: border-box;
 }
+
 /* reset */
+
 page {
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   height: 100%;
   font-size: 32rpx;
   line-height: 1.6;
 }
-form{
+
+form {
   width: 100%;
 }
-button{
-  padding: 0!important;
+
+button {
+  padding: 0 !important;
 }
-button::after{
+
+button::after {
   border: none;
 }
+
 .opacity5 {
   opacity: 0.5;
 }
-/* lib */
 
+/* lib */
 
 .round {
   border-radius: 50%;
@@ -70,7 +78,6 @@ button::after{
 .flex-column {
   flex-direction: column;
 }
-
 
 .justify-start {
   justify-content: flex-start;
@@ -137,23 +144,36 @@ button::after{
   flex-wrap: wrap;
 }
 
-.white{
+.white {
   color: white;
 }
-.black{
+
+.black {
   color: black;
 }
-.lightgray{
+
+.lightgray {
   color: #eee;
 }
-.gray{
+
+.gray {
   color: #666;
 }
-.darkgray{
+
+.darkgray {
   color: #333;
 }
+
 .small {
   font-size: 24rpx;
+}
+
+.width-full {
+  width: 100%;
+}
+
+.height-full {
+  height: 100%;
 }
 
 .maxline2 {
@@ -186,38 +206,46 @@ button::after{
   color: #fff;
 }
 
-.strong{
+.strong {
   font-weight: bold;
 }
-.tc{
+
+.tc {
   text-align: center;
 }
-.tl{
+
+.tl {
   text-align: left;
 }
-.tr{
+
+.tr {
   text-align: right;
 }
-.hide{
+
+.hide {
   display: none !important;
 }
-.fl{
+
+.fl {
   float: left;
 }
-.Mask{
+
+.Mask {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.6);
-  z-index:10000;
+  z-index: 10000;
 }
-.mainColor{
+
+.mainColor {
   color: #2f8dd6;
 }
-.mainBtn{
-  background-image: linear-gradient(225deg, #00C8FE 0%, #4FACFE 100%);
+
+.mainBtn {
+  background-image: linear-gradient(225deg, #00c8fe 0%, #4facfe 100%);
   color: #fff;
   font-size: 26rpx;
   border-radius: 15rpx;
@@ -226,15 +254,18 @@ button::after{
   height: 80rpx;
   animation: 1s infinite pulse;
 }
+
 /* page */
+
 .container {
   min-height: 100%;
   justify-content: space-between;
   font-size: 32rpx;
-  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
 }
-::-webkit-scrollbar{
-  width:0;
-  height:0;
-  color:transparent;
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
 }
