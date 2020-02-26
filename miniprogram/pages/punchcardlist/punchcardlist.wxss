@@ -15,6 +15,14 @@
   background-color: #5b90dc;
   margin-right: 20rpx;
 }
+.nomore{
+  color: gray;
+  font-size: 26rpx;
+}
+
+.nomore .iconfont {
+  font-size: 80rpx;
+}
 
 .item {
   padding: 30rpx 0;
