@@ -26,7 +26,7 @@ exports.main = async (event, context) => {
     var value = await redis.get(cacheKey);
     value = JSON.parse(value);
 
-    if (value.openid == wxContext.OPENID) {
+    if (value.openid == wxContext.OPENID && value.areaId.indexOf(event.areaId) != -1) {
 
       cacheKey = config.redis.visitCodePriKey + event.serial.replace(/-/g, '');
       let privateKey = await redis.get(cacheKey);
@@ -40,7 +40,7 @@ exports.main = async (event, context) => {
         valid: true
       }).get();
 
-      if (result.data.length > 0) {
+      if (result.data.length > 0 && event.areaId == result.data[0].area_id) {
 
         let data = result.data[0];
         let timestamp = Math.round(new Date().getTime() / 1000);

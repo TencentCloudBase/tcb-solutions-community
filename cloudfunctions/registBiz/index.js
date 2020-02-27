@@ -24,7 +24,7 @@ exports.main = async (event, context) => {
     var value = await redis.get(cacheKey);
     value = JSON.parse(value);
 
-    if (value.openid == wxContext.OPENID) {
+    if (value.openid == wxContext.OPENID && value.areaId.indexOf(event.areaId) != -1) {
 
       let key = config.redis.bizCodeKey;
       let bizCode = (await redis.incr('key') + 1000000000).toString();
@@ -34,7 +34,7 @@ exports.main = async (event, context) => {
       let body = await db.collection('tcbst_biz').add({
         data: {
           biz_code: bizCode,
-          area_id: value.areaId,
+          area_id: event.areaId,
           biz_name: event.bizName,
           address: event.address,
           telephone: event.telephone,

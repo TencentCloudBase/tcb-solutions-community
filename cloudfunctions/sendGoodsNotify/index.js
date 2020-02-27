@@ -25,7 +25,7 @@ exports.main = async (event, context) => {
     var value = await redis.get(cacheKey);
     value = JSON.parse(value);
 
-    if (value.openid == wxContext.OPENID) {
+    if (value.openid == wxContext.OPENID && value.areaId.indexOf(event.areaId) != -1) {
 
       if (event.status == 7) {//7、通知用户到货、*4、管理通知用户确认
 

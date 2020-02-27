@@ -1,7 +1,0 @@
-{
-  "redis": {
-    "host": "",
-    "password": "",
-    "adminTokenKey": ""
-  }
-}

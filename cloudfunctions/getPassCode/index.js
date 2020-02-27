@@ -27,6 +27,7 @@ exports.main = async (event, context) => {
     var msg = JSON.stringify({
       serial: event.serial,
       unionid: wxContext.UNIONID,
+      areaId: event.areaId,
       env: wxContext.ENV,
       source: wxContext.SOURCE,
       openid: wxContext.OPENID,

@@ -13,7 +13,6 @@ const redis = new Redis({
 cloud.init({ env: 'cloud-tcb' });
 const db = cloud.database();
 
-
 // 云函数入口函数
 exports.main = async (event, context) => {
 
@@ -22,14 +21,14 @@ exports.main = async (event, context) => {
   try{
 
     var queryData = null;
-    if (event.type == 2) {
+    if (event.token != null) {
       /********** 管理员  */
       let cacheKey = config.redis.adminTokenKey + event.token;
       let value = await redis.get(cacheKey);
       value = JSON.parse(value);
 
-      if (value.openid == wxContext.OPENID) {
-        queryData = { area_id: value.areaId };
+      if (value.openid == wxContext.OPENID && value.areaId.indexOf(event.areaId) != -1) {
+        queryData = { area_id: event.areaId };
       } else {
         return { error: 'token data is error' };
       };
@@ -60,13 +59,25 @@ exports.main = async (event, context) => {
     let list = [];
     if (result.data.length > 0) {
       for (let i = 0; i < result.data.length; i++) {
+
+        let info = [];
+        for (let j = 0; j < result.data[i].info; j++){
+          info.push({
+            subOrderNumber: result.data[i].info[j].sub_order_number,
+            itemName: result.data[i].info[j].item_name,
+            itemCode: result.data[i].info[j].item_code,
+            count: result.data[i].info[j].count,
+            image: result.data[i].info[j].image
+          });
+        };
+
         list.push({
           orderNumber: result.data[i].order_number,
           bizName: result.data[i].biz_name,
           bizCode: result.data[i].biz_code,
           status: result.data[i].status,
           statusDesc: result.data[i].status_desc,
-          info: result.data[i].info,
+          info: info,
           payStatus: result.data[i].pay_status,
           amount: result.data[i].amount,
           createTime: result.data[i].create_time,

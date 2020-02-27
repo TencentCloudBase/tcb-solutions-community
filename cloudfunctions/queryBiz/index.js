@@ -1,15 +1,5 @@
 // 云函数入口文件
 const cloud = require('wx-server-sdk')
-const Redis = require('ioredis');
-const config = require('./config.json');
-
-const redis = new Redis({
-  port: 6379,
-  host: config.redis.host,
-  family: 4,
-  password: config.redis.password,
-  db: 0,
-});
 cloud.init({ env: 'cloud-tcb' });
 const db = cloud.database();
 
@@ -20,45 +10,25 @@ exports.main = async (event, context) => {
 
   try {
 
-    var result = null;
-    if (event.type == 1){
-      /*****业主普通用户 */
-      result = await db.collection('tcbst_biz').where({
-        area_id: event.areaId
-      }).get();
-    }else{
-      /**********管理员 */
-      let cacheKey = config.redis.adminTokenKey + event.token;
-      let value = await redis.get(cacheKey);
-      value = JSON.parse(value);
-
-      if (value.openid == wxContext.OPENID) {
-
-        var queryData = {
-          area_id: value.areaId
-        };
-
-        if (event.bizName != null) {
-          queryData.biz_name = event.bizName;
-        };
-        if (event.address != null) {
-          queryData.address = event.address;
-        };
-        if (event.bizCode != null) {
-          queryData.biz_code = event.bizCode;
-        };
-        if (event.telephone != null) {
-          queryData.telephone = event.telephone;
-        };
-
-        result = await db.collection('tcbst_biz').where(queryData).get();
-
-      }else {
-        return { error: 'token data is error' };
-      };
-
+    var queryData = {
+      area_id: event.areaId
     };
-    
+
+    if (event.bizName != null) {
+      queryData.biz_name = event.bizName;
+    };
+    if (event.address != null) {
+      queryData.address = event.address;
+    };
+    if (event.bizCode != null) {
+      queryData.biz_code = event.bizCode;
+    };
+    if (event.telephone != null) {
+      queryData.telephone = event.telephone;
+    };
+
+    var result = await db.collection('tcbst_biz').where(queryData).get();
+
     var list = [];
     if (result.data.length > 0) {
 
