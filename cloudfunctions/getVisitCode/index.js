@@ -26,11 +26,12 @@ exports.main = async (event, context) => {
     var value = await redis.get(cacheKey);
     value = JSON.parse(value);
 
-    if (value.openid == wxContext.OPENID) {
+    if (value.openid == wxContext.OPENID && value.areaId.indexOf(event.areaId) != -1 ) {
 
       // 查询数据
       var result = await db.collection('tcbst_admin').where({
-        name: 'testOne', valid: true
+        openid: value.openid, 
+        valid: true
       }).get();
 
       if (result.data.length > 0) {
@@ -50,11 +51,10 @@ exports.main = async (event, context) => {
         /*************增加扫码记录 */
         let body = await db.collection('tcbst_visit_code').add({
           data: {
-            areaId: event.areaId,
             serial: serial,
             code_data: codeData,
             openid: data.openid,
-            area_id: data.area_id,
+            area_id: event.areaId,
             area_area: data.area_area,
             org_mame: data.org_name,
             type: 'visit',

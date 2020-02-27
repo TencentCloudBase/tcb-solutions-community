@@ -24,7 +24,7 @@ exports.main = async (event, context) => {
     var value = await redis.get(cacheKey);
     value = JSON.parse(value);
 
-    if (value.openid == wxContext.OPENID) {
+    if (value.openid == wxContext.OPENID && value.areaId.indexOf(event.areaId) != -1) {
 
       let data = null;
       let nowDate = new Date();
@@ -46,7 +46,7 @@ exports.main = async (event, context) => {
 
       /****更新用户数据记录 */
       let body =await db.collection('tcbst_biz').where({
-        area_id: value.areaId,
+        area_id: event.areaId,
         biz_code: event.bizCode
       }).update({data: data});
 

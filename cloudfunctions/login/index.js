@@ -2,7 +2,7 @@
 // 部署：在 cloud-functions/login 文件夹右击选择 “上传并部署”
 
 const cloud = require('wx-server-sdk');
-
+const signIn = require('./signIn');
 cloud.init({ env: 'cloud-tcb' });
 const db = cloud.database();
 
@@ -37,7 +37,10 @@ exports.main = async (event, context) => {
         data: data
       });
 
-      return {
+      /***********管理员登录 */
+      let adminToken = await signIn({ openid: wxContext.OPENID, db: db });
+      console.log('adminToken', adminToken);
+      let ret = {
         error: null,
         requestId: event.requestId,
         newUser: false,
@@ -45,7 +48,14 @@ exports.main = async (event, context) => {
         timestamp: Math.round(new Date().getTime() / 1000)
       };
 
+      if (adminToken.error === null){
+        ret.token = adminToken.token;
+      };
+
+      return ret;
+
     }else{
+
       /****新增用户数据记录 */
       let body = await db.collection('tcbst_user').add({
         data: {
@@ -77,4 +87,5 @@ exports.main = async (event, context) => {
     console.log(error);
     return { error: error };
   };
-}
+};
+

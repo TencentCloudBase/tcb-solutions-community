@@ -32,7 +32,8 @@ exports.main = async (event, context) => {
     if (sm2.doVerifySignature(msg, event.signData, publicKey)) {
 
       let result = await db.collection('tcbst_visit_code').where({
-        serial: event.serial
+        serial: event.serial,
+        area_id: event.areaId
       }).get();
 
       if (result.data.length > 0) {
